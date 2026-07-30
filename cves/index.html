@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVEs - Farid Narimanov</title>
+<link rel="stylesheet" href="/style.css">
+<meta name="description" content="Publicly disclosed CVEs and registered vulnerability IDs discovered by Farid Narimanov.">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="canonical" href="https://faridnarimanov.vercel.app/cves/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Farid Narimanov">
+<meta property="og:title" content="CVEs - Farid Narimanov">
+<meta property="og:description" content="Publicly disclosed CVEs and registered vulnerability IDs discovered by Farid Narimanov.">
+<meta property="og:url" content="https://faridnarimanov.vercel.app/cves/">
+<meta property="og:image" content="https://faridnarimanov.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CVEs - Farid Narimanov">
+<meta name="twitter:description" content="Publicly disclosed CVEs and registered vulnerability IDs discovered by Farid Narimanov.">
+<meta name="twitter:image" content="https://faridnarimanov.vercel.app/og-image.png">
+<meta name="twitter:site" content="@FaridNarimanov">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="nav-toggle" aria-label="Menyu">☰ MENU</button>
+    <nav class="nav-links">
+      <a href="/"><span class="lang-en">About</span><span class="lang-az">Haqqımda</span></a>
+      <a href="/skills/"><span class="lang-en">Skills</span><span class="lang-az">Bacarıqlar</span></a>
+      <a href="/certifications/"><span class="lang-en">Certifications</span><span class="lang-az">Sertifikatlar</span></a>
+      <a href="/cves/" class="active"><span class="label">CVE<span class="lang-az">-lər</span><span class="lang-en">s</span></span></a>
+      <a href="/projects/"><span class="lang-en">Projects</span><span class="lang-az">Layihələr</span></a>
+      <a href="/findings/"><span class="lang-en">Findings</span><span class="lang-az">Aşkarlamalar</span></a>
+    </nav>
+    <div class="lang-toggle">
+      <button type="button" data-set-lang="en">EN</button>
+      <button type="button" data-set-lang="az">AZ</button>
+    </div>
+  </div>
+</header>
+
+<main class="content-wrap">
+  <h1 class="page-title">CVE<span class="lang-en">s</span><span class="lang-az">-lər</span></h1>
+  <p class="page-lede lang-en">Officially registered vulnerabilities. Fully disclosed entries and those still under "reserved" status are shown separately below.</p>
+  <p class="page-lede lang-az">Rəsmi qeydə alınmış zəifliklər. Detalları ictimaiyyətə açıqlanmış və hələ "reserved" (gözləmədə) statusunda olanlar aşağıda ayrı-ayrı təqdim edilir.</p>
+
+  <section class="block">
+    <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
+
+    <div class="cve-card">
+      <div class="cve-top">
+        <span class="cve-id">CVE-2026-16561</span>
+        <span class="cve-status published"><span class="dot"></span> <span class="lang-en">Published</span><span class="lang-az">Açıqlanmış</span></span>
+      </div>
+      <div class="cve-title">Sunshine Photo Cart &lt; 3.6.12 — Unauthenticated Private Gallery Comment Disclosure</div>
+      <p class="cve-desc lang-en">The plugin does not perform access control checks in one of its AJAX actions, allowing unauthenticated users to retrieve the comments of images belonging to private, password-protected, or otherwise access-restricted galleries.</p>
+      <p class="cve-desc lang-az">Plugin AJAX action-larından birində giriş nəzarəti (access control) yoxlanışı aparmır. Bu zəiflik autentifikasiyadan keçməmiş istifadəçilərə şifrə ilə qorunan və məhdudlaşdırılmış qalereyalara aid şəkil şərhlərini oxumağa imkan verir.</p>
+
+      <div class="cve-meta">
+        <div>
+          <span class="k">CVSS 3.1</span>
+          <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+          <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+        </div>
+        <div>
+          <span class="k">CWE</span>
+          <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+        </div>
+        <div>
+          <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+          <span class="v">Sunshine Photo Cart &lt; 3.6.12</span>
+        </div>
+        <div>
+          <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+          <span class="v">3.6.12</span>
+        </div>
+        <div>
+          <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+          <span class="v">2026-07-27</span>
+        </div>
+      </div>
+
+      <a class="cve-link" href="https://wpscan.com/vulnerability/25bbf054-3b3f-4d88-899e-03d48055cbcd/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="lang-en">Reserved (details coming soon)</span><span class="lang-az">Reserved (Detallar tezliklə açıqlanacaq)</span></h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px;">
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-16619</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-16734</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-17541</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-18032</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-18035</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+      <div class="cve-card reserved" style="margin-bottom:0;">
+        <div class="cve-top" style="margin-bottom:0;">
+          <span class="cve-id" style="font-size:15px;">CVE-2026-18357</span>
+          <span class="cve-status reserved"><span class="dot"></span> <span class="lang-en">Reserved</span><span class="lang-az">Reserved</span></span>
+        </div>
+      </div>
+    </div>
+    <p class="lang-en" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
+      These IDs are officially registered with WPScan but awaiting coordinated public disclosure. Full technical breakdowns will be published here upon release.
+    </p>
+    <p class="lang-az" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
+      Bu ID-lər WPScan tərəfindən qeydə alınıb, lakin koordinasiyalı açıqlama müddətini gözləyir. İctimaiyyətə açıqlandıqdan sonra tam texniki detallar bura əlavə ediləcək.
+    </p>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-inner">
+    <span>© 2026 Farid Narimanov</span>
+    <div class="footer-links">
+      <a href="https://github.com/FaridNarimanov" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/faridnarimanov/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:faridnarimanof@gmail.com">Email</a>
+    </div>
+    <span class="lang-en">Baku, Azerbaijan</span><span class="lang-az">Bakı, Azərbaycan</span>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
