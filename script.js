@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setLang(lang) {
     root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
     localStorage.setItem('preferred_lang', lang);
     if (btnEn && btnAz) {
       btnEn.classList.toggle('active', lang === 'en');
