@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://faridnarimanov.vercel.app/</loc>
+    <loc>https://faridnarimanov.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://faridnarimanov.vercel.app/skills/</loc>
+    <loc>https://faridnarimanov.com/skills/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faridnarimanov.vercel.app/certifications/</loc>
+    <loc>https://faridnarimanov.com/certifications/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faridnarimanov.vercel.app/cves/</loc>
+    <loc>https://faridnarimanov.com/cves/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faridnarimanov.vercel.app/projects/</loc>
+    <loc>https://faridnarimanov.com/projects/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://faridnarimanov.vercel.app/findings/</loc>
+    <loc>https://faridnarimanov.com/findings/</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
