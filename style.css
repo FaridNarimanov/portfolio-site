@@ -324,8 +324,9 @@ section.block h2 {
   font: inherit; color: inherit; text-align: left; cursor: pointer;
 }
 .cve-top-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.cve-top-right { display: flex; align-items: center; gap: 14px; }
 .cve-chevron {
-  display: inline-flex; flex-shrink: 0; color: var(--text-3); font-size: 12px;
+  display: inline-flex; flex-shrink: 0; color: var(--text-3); font-size: 20px; line-height: 1;
   transition: transform .25s ease, color .25s ease; transform: rotate(0deg);
 }
 .cve-card.open .cve-chevron { transform: rotate(180deg); color: var(--accent); }
