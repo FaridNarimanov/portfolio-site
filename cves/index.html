@@ -57,103 +57,118 @@
   <section class="block">
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
 
-    <div class="cve-card">
-      <div class="cve-top">
-        <span class="cve-id">CVE-2026-16561</span>
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+          <span class="cve-id">CVE-2026-16561</span>
+        </span>
         <span class="cve-status published"><span class="dot"></span> <span class="lang-en">Published</span><span class="lang-az">Açıqlanmış</span></span>
-      </div>
-      <div class="cve-title">Sunshine Photo Cart &lt; 3.6.12 — Unauthenticated Private Gallery Comment Disclosure</div>
-      <p class="cve-desc lang-en">The plugin does not perform access control checks in one of its AJAX actions, allowing unauthenticated users to retrieve the comments of images belonging to private, password-protected, or otherwise access-restricted galleries.</p>
-      <p class="cve-desc lang-az">Plugin AJAX action-larından birində giriş nəzarəti (access control) yoxlanışı aparmır. Bu zəiflik autentifikasiyadan keçməmiş istifadəçilərə şifrə ilə qorunan və məhdudlaşdırılmış qalereyalara aid şəkil şərhlərini oxumağa imkan verir.</p>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">Sunshine Photo Cart &lt; 3.6.12 — Unauthenticated Private Gallery Comment Disclosure</div>
+        <p class="cve-desc lang-en">The plugin does not perform access control checks in one of its AJAX actions, allowing unauthenticated users to retrieve the comments of images belonging to private, password-protected, or otherwise access-restricted galleries.</p>
+        <p class="cve-desc lang-az">Plugin AJAX action-larından birində giriş nəzarəti (access control) yoxlanışı aparmır. Bu zəiflik autentifikasiyadan keçməmiş istifadəçilərə şifrə ilə qorunan və məhdudlaşdırılmış qalereyalara aid şəkil şərhlərini oxumağa imkan verir.</p>
 
-      <div class="cve-meta">
-        <div>
-          <span class="k">CVSS 3.1</span>
-          <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
-          <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Sunshine Photo Cart &lt; 3.6.12</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">3.6.12</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-07-27</span>
+          </div>
         </div>
-        <div>
-          <span class="k">CWE</span>
-          <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
-          <span class="v">Sunshine Photo Cart &lt; 3.6.12</span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
-          <span class="v">3.6.12</span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
-          <span class="v">2026-07-27</span>
-        </div>
-      </div>
 
-      <a class="cve-link" href="https://wpscan.com/vulnerability/25bbf054-3b3f-4d88-899e-03d48055cbcd/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+        <a class="cve-link" href="https://wpscan.com/vulnerability/25bbf054-3b3f-4d88-899e-03d48055cbcd/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
     </div>
 
-    <div class="cve-card">
-      <div class="cve-top">
-        <span class="cve-id">CVE-2026-16619</span>
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+          <span class="cve-id">CVE-2026-16619</span>
+        </span>
         <span class="cve-status published"><span class="dot"></span> <span class="lang-en">Published</span><span class="lang-az">Açıqlanmış</span></span>
-      </div>
-      <div class="cve-title">miniOrange 2FA &lt; 6.2.8 — 2FA Bypass via Unlimited Second-Factor Attempts</div>
-      <p class="cve-desc lang-en">The plugin does not correctly limit the number of second-factor verification attempts, tracking them against a client-supplied identifier that is reissued on every login, allowing an attacker who already knows a user's password to guess the one-time code without limit and take over the account.</p>
-      <p class="cve-desc lang-az">Plugin ikinci addım (2FA) doğrulama cəhdlərinin sayını düzgün məhdudlaşdırmır — cəhdlər hər girişdə yenidən verilən, müştəri tərəfindən göndərilən identifikatora əsasən izlənilir. Bu, artıq istifadəçinin şifrəsini bilən hücumçuya birdəfəlik kodu limitsiz təxmin edərək hesabı ələ keçirməyə imkan verir.</p>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">miniOrange 2FA &lt; 6.2.8 — 2FA Bypass via Unlimited Second-Factor Attempts</div>
+        <p class="cve-desc lang-en">The plugin does not correctly limit the number of second-factor verification attempts, tracking them against a client-supplied identifier that is reissued on every login, allowing an attacker who already knows a user's password to guess the one-time code without limit and take over the account.</p>
+        <p class="cve-desc lang-az">Plugin ikinci addım (2FA) doğrulama cəhdlərinin sayını düzgün məhdudlaşdırmır — cəhdlər hər girişdə yenidən verilən, müştəri tərəfindən göndərilən identifikatora əsasən izlənilir. Bu, artıq istifadəçinin şifrəsini bilən hücumçuya birdəfəlik kodu limitsiz təxmin edərək hesabı ələ keçirməyə imkan verir.</p>
 
-      <div class="cve-meta">
-        <div>
-          <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
-          <span class="v">miniOrange 2FA &lt; 6.2.8</span>
+        <div class="cve-meta">
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">miniOrange 2FA &lt; 6.2.8</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">6.2.8</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-07-30</span>
+          </div>
         </div>
-        <div>
-          <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
-          <span class="v">6.2.8</span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
-          <span class="v">2026-07-30</span>
-        </div>
-      </div>
 
-      <a class="cve-link" href="https://wpscan.com/vulnerability/54fc1229-3e68-4d21-baec-59a44cf12a65/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+        <a class="cve-link" href="https://wpscan.com/vulnerability/54fc1229-3e68-4d21-baec-59a44cf12a65/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
     </div>
 
-    <div class="cve-card">
-      <div class="cve-top">
-        <span class="cve-id">CVE-2026-16734</span>
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+          <span class="cve-id">CVE-2026-16734</span>
+        </span>
         <span class="cve-status published"><span class="dot"></span> <span class="lang-en">Published</span><span class="lang-az">Açıqlanmış</span></span>
-      </div>
-      <div class="cve-title">Stripe Payment Forms by WP Full Pay &lt; 8.5.2 — Unauthenticated Payment Intent Amount Manipulation</div>
-      <p class="cve-desc lang-en">The plugin does not verify that the caller owns the Stripe payment intent referenced by two unauthenticated payment-form AJAX actions, allowing an unauthenticated visitor to change the amount of a payment intent that the plugin then updates server-side through the Stripe API using the store's secret key. An ownership check added in 8.5.0 was applied to only one handler, leaving the pricing-recalculation and payment-intent-update actions unprotected.</p>
-      <p class="cve-desc lang-az">Plugin, autentifikasiya olunmamış iki ödəniş forması AJAX action-unda istinad edilən Stripe payment intent-inin çağırana aid olduğunu yoxlamır. Bu, autentifikasiyasız ziyarətçiyə ödəniş məbləğini dəyişməyə imkan verir — plugin bunu mağazanın gizli Stripe açarı ilə server tərəfində tətbiq edir. 8.5.0 versiyasında əlavə olunan sahiblik yoxlaması yalnız bir handler-ə tətbiq edilib, qiymət-yenidənhesablama və payment-intent-update əməliyyatları qorunmaz qalıb.</p>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">Stripe Payment Forms by WP Full Pay &lt; 8.5.2 — Unauthenticated Payment Intent Amount Manipulation</div>
+        <p class="cve-desc lang-en">The plugin does not verify that the caller owns the Stripe payment intent referenced by two unauthenticated payment-form AJAX actions, allowing an unauthenticated visitor to change the amount of a payment intent that the plugin then updates server-side through the Stripe API using the store's secret key. An ownership check added in 8.5.0 was applied to only one handler, leaving the pricing-recalculation and payment-intent-update actions unprotected.</p>
+        <p class="cve-desc lang-az">Plugin, autentifikasiya olunmamış iki ödəniş forması AJAX action-unda istinad edilən Stripe payment intent-inin çağırana aid olduğunu yoxlamır. Bu, autentifikasiyasız ziyarətçiyə ödəniş məbləğini dəyişməyə imkan verir — plugin bunu mağazanın gizli Stripe açarı ilə server tərəfində tətbiq edir. 8.5.0 versiyasında əlavə olunan sahiblik yoxlaması yalnız bir handler-ə tətbiq edilib, qiymət-yenidənhesablama və payment-intent-update əməliyyatları qorunmaz qalıb.</p>
 
-      <div class="cve-meta">
-        <div>
-          <span class="k">CVSS 3.1</span>
-          <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
-          <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WP Full Pay &lt; 8.5.2</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">8.5.2</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-07-30</span>
+          </div>
         </div>
-        <div>
-          <span class="k">CWE</span>
-          <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
-          <span class="v">WP Full Pay &lt; 8.5.2</span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
-          <span class="v">8.5.2</span>
-        </div>
-        <div>
-          <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
-          <span class="v">2026-07-30</span>
-        </div>
-      </div>
 
-      <a class="cve-link" href="https://wpscan.com/vulnerability/5fcb5b11-3ebd-4821-aa6f-c6be70bac395/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+        <a class="cve-link" href="https://wpscan.com/vulnerability/5fcb5b11-3ebd-4821-aa6f-c6be70bac395/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
     </div>
   </section>
 

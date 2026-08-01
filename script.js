@@ -19,6 +19,21 @@ document.addEventListener('click', (e) => {
   setTimeout(() => { window.location.href = href; }, 150);
 });
 
+// CVE kartları — açılıb-bağlanan (accordion) bölmələr
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.cve-card.collapsible').forEach(card => {
+    const toggle = card.querySelector('.cve-top');
+    const body = card.querySelector('.cve-body');
+    if (!toggle || !body) return;
+
+    toggle.addEventListener('click', () => {
+      const isOpen = card.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+    });
+  });
+});
+
 // Dil seçimi — localStorage ilə yadda saxlayır
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
@@ -32,6 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEn.classList.toggle('active', lang === 'en');
       btnAz.classList.toggle('active', lang === 'az');
     }
+    // Açıq CVE kartlarının hündürlüyünü dil dəyişəndən sonra yenidən hesabla
+    document.querySelectorAll('.cve-card.collapsible.open .cve-body').forEach(body => {
+      body.style.maxHeight = body.scrollHeight + 'px';
+    });
   }
 
   if (btnEn && btnAz) {

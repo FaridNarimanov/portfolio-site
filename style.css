@@ -316,7 +316,24 @@ section.block h2 {
   padding: 24px 26px; margin-bottom: 16px;
 }
 .cve-card.reserved { border-left-color: var(--sev-info); opacity: 0.88; }
-.cve-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
+.cve-card.collapsible { padding: 18px 26px; transition: padding .25s ease; cursor: default; }
+.cve-card.collapsible.open { padding: 24px 26px; }
+.cve-top {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+  width: 100%; background: none; border: none; margin: 0; padding: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
+}
+.cve-top-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.cve-chevron {
+  display: inline-flex; flex-shrink: 0; color: var(--text-3); font-size: 12px;
+  transition: transform .25s ease, color .25s ease; transform: rotate(0deg);
+}
+.cve-card.open .cve-chevron { transform: rotate(180deg); color: var(--accent); }
+.cve-body {
+  overflow: hidden; max-height: 0; opacity: 0; margin-top: 0;
+  transition: max-height .3s ease, opacity .25s ease, margin-top .3s ease;
+}
+.cve-card.open .cve-body { opacity: 1; margin-top: 16px; }
 .cve-id { font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--text-1); }
 .cve-status {
   font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
