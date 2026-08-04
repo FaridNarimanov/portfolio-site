@@ -177,16 +177,16 @@
     <div class="cve-card collapsible">
       <button class="cve-top" type="button" aria-expanded="false">
         <span class="cve-top-left">
-          <span class="cve-id">CVE-2026-18357</span>
+          <span class="cve-id">CVE-2026-17541</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
       </button>
       <div class="cve-body">
-        <div class="cve-title">WPC Order Tip for WooCommerce &lt; 3.3.1 — Unauthenticated Order Data Disclosure</div>
-        <p class="cve-desc lang-en">The plugin does not perform authorisation or nonce checks in one of its reporting features, allowing unauthenticated attackers to retrieve sensitive order data belonging to any customer of the store, such as billing names, order IDs and statuses, fee amounts and order dates.</p>
-        <p class="cve-desc lang-az">Plugin öz hesabat funksiyalarından birində icazə (authorization) və ya nonce yoxlaması aparmır. Bu, autentifikasiyasız hücumçulara mağazanın istənilən müştərisinə aid həssas sifariş məlumatlarını — hesab-faktura adları, sifariş ID-ləri və statusları, komissiya məbləğləri və sifariş tarixləri kimi — əldə etməyə imkan verir.</p>
+        <div class="cve-title">Bit File Manager &lt; 6.9.1 — Unauthenticated File Activity Log Disclosure</div>
+        <p class="cve-desc lang-en">The plugin does not have authorisation checks on one of its REST API routes, allowing unauthenticated users to read its file activity log, disclosing the file operations performed on the site, the paths involved and the name of the user who performed them.</p>
+        <p class="cve-desc lang-az">Plugin öz REST API route-larından birində icazə (authorization) yoxlaması aparmır. Bu, autentifikasiyasız istifadəçilərə fayl fəaliyyət jurnalını oxumağa imkan verir — saytda aparılan fayl əməliyyatları, əlaqəli fayl yolları və əməliyyatı icra edən istifadəçinin adı bununla açıqlanır.</p>
 
         <div class="cve-meta">
           <div>
@@ -200,19 +200,19 @@
           </div>
           <div>
             <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
-            <span class="v">WPC Order Tip for WooCommerce &lt; 3.3.1</span>
+            <span class="v">Bit File Manager &lt; 6.9.1</span>
           </div>
           <div>
             <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
-            <span class="v">3.3.1</span>
+            <span class="v">6.9.1</span>
           </div>
           <div>
             <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
-            <span class="v">2026-08-03</span>
+            <span class="v">2026-08-04</span>
           </div>
         </div>
 
-        <a class="cve-link" href="https://wpscan.com/vulnerability/ff675d0a-03f2-4309-830c-0e96e1d95a62/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+        <a class="cve-link" href="https://wpscan.com/vulnerability/972bf72f-08c4-41ec-b6e9-2d6083d21734/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
 
@@ -257,16 +257,53 @@
         <a class="cve-link" href="https://wpscan.com/vulnerability/1b6c5935-c8e0-4b9b-9ba6-0f16a0e2cdae/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-18357</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">WPC Order Tip for WooCommerce &lt; 3.3.1 — Unauthenticated Order Data Disclosure</div>
+        <p class="cve-desc lang-en">The plugin does not perform authorisation or nonce checks in one of its reporting features, allowing unauthenticated attackers to retrieve sensitive order data belonging to any customer of the store, such as billing names, order IDs and statuses, fee amounts and order dates.</p>
+        <p class="cve-desc lang-az">Plugin öz hesabat funksiyalarından birində icazə (authorization) və ya nonce yoxlaması aparmır. Bu, autentifikasiyasız hücumçulara mağazanın istənilən müştərisinə aid həssas sifariş məlumatlarını — hesab-faktura adları, sifariş ID-ləri və statusları, komissiya məbləğləri və sifariş tarixləri kimi — əldə etməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-200 · Exposure of Sensitive Information</span><span class="lang-az">CWE-200 · Həssas Məlumatın Açıqlanması</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WPC Order Tip for WooCommerce &lt; 3.3.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">3.3.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-03</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/ff675d0a-03f2-4309-830c-0e96e1d95a62/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
   </section>
 
   <section class="block">
     <h2><span class="lang-en">Reserved (details coming soon)</span><span class="lang-az">Reserved (Detallar tezliklə açıqlanacaq)</span></h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px;">
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-17541</span>
-        </div>
-      </div>
       <div class="cve-card reserved" style="margin-bottom:0;">
         <div class="cve-top" style="margin-bottom:0;">
           <span class="cve-id" style="font-size:15px;">CVE-2026-18035</span>
