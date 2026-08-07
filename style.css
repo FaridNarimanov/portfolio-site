@@ -36,6 +36,18 @@ html {
   scrollbar-gutter: stable;
 }
 
+#matrix-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+}
+@media (prefers-reduced-motion: reduce) {
+  #matrix-bg { display: none; }
+}
+
 /* Reliable cross-page fade: fade the incoming page in (pure CSS, always
    fires on load) and fade the outgoing page out via a JS-toggled class
    right before navigation (see script.js). This is deterministic across

@@ -1,3 +1,44 @@
+// Matrix-tərzi fon animasiyası — cyan/crimson simvol yağışı
+(() => {
+  const canvas = document.getElementById('matrix-bg');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const ctx = canvas.getContext('2d');
+  const chars = 'アイウエオカキクケコサシスセソタチツテト01ABCDEF{}<>/;$#'.split('');
+  const fontSize = 15;
+  let columns, drops;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = new Array(columns).fill(0).map(() => Math.floor(Math.random() * -40));
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(10, 13, 18, 0.06)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = fontSize + 'px "JetBrains Mono", monospace';
+
+    for (let i = 0; i < columns; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      const isAccent = Math.random() < 0.02;
+      ctx.fillStyle = isAccent ? '#ff3b5c' : '#2de0c9';
+      ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 50);
+})();
+
 // Səhifələr arası keçid: link klikləndikdə əvvəl yumşaq fade-out,
 // sonra naviqasiya. Bütün brauzerlərdə eyni cür işləyir (təcrübi
 // View Transitions API-dən fərqli olaraq).
