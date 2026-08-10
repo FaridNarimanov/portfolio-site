@@ -56,13 +56,17 @@
   <p class="page-lede lang-az">Penetration testing, avtomatlaşdırma və zəifliklərin kəşfiyyatı üçün hazırladığım xüsusi alətlər və skriptlər.</p>
 
   <section class="block">
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-name">wp-plugin-auditor</span>
-        <span class="project-badge">Python · tree-sitter</span>
-      </div>
+    <div class="project-card collapsible">
+      <button class="project-top" type="button" aria-expanded="false">
+        <span class="project-top-left">
+          <span class="project-name">wp-plugin-auditor</span>
+          <span class="project-badge">Python · tree-sitter</span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">▾</span>
+      </button>
       <p class="project-tagline"><span class="lang-en">Static analysis for missing authorization checks in WordPress plugins</span><span class="lang-az">WordPress pluginlərində çatışmayan icazə yoxlamaları üçün statik analiz</span></p>
 
+      <div class="project-body">
       <p class="project-desc lang-en">Finds AJAX and REST API handlers that are reachable without a nonce, capability, or ownership check. Most PHP static analyzers are taint-based — they track user input to a dangerous sink — but missing authorization has no data flow to trace; the bug is the absence of a check. This tool instead models WordPress's own hook/permission system directly: it resolves every callback to its full body, scans for known auth checkpoints, and flags entry points where none exist, including a heuristic pass for IDOR-shaped access. Validated against real CVEs (Plugin Optimizer, Simply Schedule Appointments) with zero false positives, and against a ~9,000-file corpus including WooCommerce, Elementor and WPForms to keep clean codebases clean.</p>
       <p class="project-desc lang-az">Nonce, icazə (capability) və ya sahiblik yoxlaması olmadan əlçatan olan AJAX və REST API handler-lərini tapır. Əksər PHP statik analizatorları taint-əsaslıdır — istifadəçi girişini təhlükəli "sink"ə qədər izləyir — amma çatışmayan icazə yoxlamasının izlənəcək data axını yoxdur; buq elə yoxlamanın olmamasıdır. Bu alət əvəzinə birbaşa WordPress-in öz hook/icazə sistemini modelləşdirir: hər callback-i tam body-sinə qədər həll edir, məlum auth checkpoint-lərini axtarır və heç birinin olmadığı giriş nöqtələrini işarələyir, IDOR-formalı girişlər üçün heuristik yoxlama da daxil olmaqla. Real CVE-lər üzərində (Plugin Optimizer, Simply Schedule Appointments) sıfır yalnış-pozitiv nəticə ilə, həmçinin WooCommerce, Elementor və WPForms daxil olmaqla ~9,000 fayllıq korpus üzərində doğrulanıb.</p>
 
@@ -76,6 +80,7 @@
       </ul>
 
       <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/wp-plugin-auditor && cd wp-plugin-auditor && pip install -r requirements.txt</div>
+      </div>
 
       <div class="project-footer">
         <div class="tags">
@@ -92,13 +97,17 @@
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-name">reconductor</span>
-        <span class="project-badge">Go · CLI</span>
-      </div>
+    <div class="project-card collapsible">
+      <button class="project-top" type="button" aria-expanded="false">
+        <span class="project-top-left">
+          <span class="project-name">reconductor</span>
+          <span class="project-badge">Go · CLI</span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">▾</span>
+      </button>
       <p class="project-tagline"><span class="lang-en">All-in-one recon aggregator for the early stages of a pentest</span><span class="lang-az">Pentest-in ilkin mərhələləri üçün hərtərəfli recon aqreqatoru</span></p>
 
+      <div class="project-body">
       <p class="project-desc lang-en">Give it a domain, IP, or CIDR range and it orchestrates subfinder, httpx, naabu, nmap, whatweb and feroxbuster into a single pipeline, each stage feeding the next, then renders the results as a colorized terminal summary plus JSON and self-contained HTML reports. Nine additional pure-Go modules run automatically afterward — DNS brute-force, JS endpoint extraction, origin-IP discovery behind CDNs, Wayback URL history, WAF fingerprinting, S3/GCS bucket probing, and passive-to-aggressive Active Directory detection (DNS SRV records, then LDAP anonymous bind, SMB null-session enumeration, and Kerberos user enumeration). Written in Go using only the standard library — external tools are invoked via os/exec, so building it pulls in no third-party modules, and every module is fault-tolerant: a missing tool or timeout is recorded in the report and the pipeline keeps going.</p>
       <p class="project-desc lang-az">Domen, IP və ya CIDR aralığı ver, o da subfinder, httpx, naabu, nmap, whatweb və feroxbuster-i tək bir pipeline-da ardıcıl işlədir (hər mərhələ növbətini bəsləyir), sonra nəticələri rəngli terminal xülasəsi, JSON və özündə tam olan HTML hesabat kimi göstərir. Bundan sonra doqquz əlavə saf-Go modulu avtomatik işə düşür — DNS brute-force, JS endpoint çıxarılması, CDN arxasında origin-IP kəşfi, Wayback URL tarixçəsi, WAF fingerprinting, S3/GCS bucket yoxlaması və passiv-dən aqressivə Active Directory aşkarlaması (DNS SRV qeydləri, sonra LDAP anonim bind, SMB null-session sayılması və Kerberos istifadəçi sayılması). Yalnız standart kitabxana istifadə edərək Go-da yazılıb — xarici alətlər os/exec vasitəsilə çağırılır, ona görə build zamanı heç bir üçüncü tərəf modulu yüklənmir; hər modul xəta-davamlıdır — çatışmayan alət və ya timeout hesabatda qeyd olunur, pipeline isə davam edir.</p>
 
@@ -112,6 +121,7 @@
       </ul>
 
       <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/reconductor && cd reconductor && go build -o reconductor ./cmd/reconductor</div>
+      </div>
 
       <div class="project-footer">
         <div class="tags">
@@ -128,13 +138,17 @@
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-name">secretpulse</span>
-        <span class="project-badge">Go · CLI</span>
-      </div>
+    <div class="project-card collapsible">
+      <button class="project-top" type="button" aria-expanded="false">
+        <span class="project-top-left">
+          <span class="project-name">secretpulse</span>
+          <span class="project-badge">Go · CLI</span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">▾</span>
+      </button>
       <p class="project-tagline"><span class="lang-en">Git history secrets scanner with live validation</span><span class="lang-az">Canlı doğrulama ilə git tarixçəsi sirlər skaneri</span></p>
 
+      <div class="project-body">
       <p class="project-desc lang-en">Finds hardcoded secrets across a git repository's entire history — including ones deleted in a later commit — and checks which of them still work. Deleting a secret in a follow-up commit does not remove it from the repository; it stays in the object database, reachable by anyone who clones. Where most scanners stop at detection, secretpulse goes further: each candidate is validated against its provider's own read-only API and reported as ACTIVE, DEAD, or UNKNOWN.</p>
       <p class="project-desc lang-az">Git repozitorisinin bütün tarixçəsində (sonrakı commit-lərdə silinmiş olsa belə) hardcoded sirləri tapır və onların hələ də işlək olub-olmadığını yoxlayır. Bir sirri sonrakı commit-də silmək onu repozitoridən çıxarmır — o, obyekt bazasında qalır və reponu klonlayan hər kəs üçün əlçatandır. Əksər skanerlər aşkarlamaqla kifayətlənir, secretpulse isə bir addım irəli gedir: tapılan hər namizəd öz provayderinin read-only API-si ilə doğrulanır və ACTIVE, DEAD, ya da UNKNOWN kimi hesabat verilir.</p>
 
@@ -148,6 +162,7 @@
       </ul>
 
       <div class="project-install"><span class="prompt">$</span>go install github.com/FaridNarimanov/secretpulse/cmd/secretpulse@latest</div>
+      </div>
 
       <div class="project-footer">
         <div class="tags">
@@ -164,13 +179,17 @@
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-name">bolahunter</span>
-        <span class="project-badge">Go · CLI</span>
-      </div>
+    <div class="project-card collapsible">
+      <button class="project-top" type="button" aria-expanded="false">
+        <span class="project-top-left">
+          <span class="project-name">bolahunter</span>
+          <span class="project-badge">Go · CLI</span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">▾</span>
+      </button>
       <p class="project-tagline"><span class="lang-en">REST API authorization scanner — BOLA/IDOR, JWT bypass, mass assignment</span><span class="lang-az">REST API səlahiyyət skaneri — BOLA/IDOR, JWT bypass, mass assignment</span></p>
 
+      <div class="project-body">
       <p class="project-desc lang-en">A CLI scanner that tests a REST API for authorization vulnerabilities straight from an OpenAPI/Swagger spec and a set of test identities: BOLA/IDOR (one user reaching another user's objects), broken JWT authentication (alg:none, unsigned tokens, kid header injection), and mass assignment (write endpoints accepting privilege-sensitive fields the client should never control). It parses the spec, discovers which endpoints require auth, and fires cross-user, forged-token, and over-posted requests at them — authorization is exactly the class of bug a spec alone cannot reason about, since it takes actually trying one user's token against another user's data to know.</p>
       <p class="project-desc lang-az">OpenAPI/Swagger spesifikasiyası və test identity dəstindən istifadə edərək REST API-ni səlahiyyət zəiflikləri üzrə test edən CLI skaneri: BOLA/IDOR (bir istifadəçinin başqasının obyektinə çatması), pozulmuş JWT autentifikasiyası (alg:none, imzalanmamış token-lər, kid header injection) və mass assignment (client-in heç vaxt idarə etməməli olduğu imtiyaz-həssas sahələri qəbul edən yazma endpoint-ləri). Spesifikasiyanı oxuyur, hansı endpoint-lərin autentifikasiya tələb etdiyini müəyyən edir və onlara cross-user, saxta token və "over-posted" sorğular göndərir — səlahiyyət tam olaraq spesifikasiyanın tək başına həll edə bilmədiyi bug tipidir, çünki bunu bilmək üçün həqiqətən bir istifadəçinin token-ini başqasının datası üzərində sınamaq lazımdır.</p>
 
@@ -184,6 +203,7 @@
       </ul>
 
       <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/bolahunter && cd bolahunter && go build -o bolahunter ./cmd/bolahunter</div>
+      </div>
 
       <div class="project-footer">
         <div class="tags">

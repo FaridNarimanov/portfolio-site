@@ -75,6 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Layihə kartları — açılıb-bağlanan (accordion) bölmələr
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.project-card.collapsible').forEach(card => {
+    const toggle = card.querySelector('.project-top');
+    const body = card.querySelector('.project-body');
+    if (!toggle || !body) return;
+
+    toggle.addEventListener('click', () => {
+      const isOpen = card.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+    });
+  });
+});
+
 // Dil seçimi — localStorage ilə yadda saxlayır
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
@@ -89,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEn.classList.toggle('active', lang === 'en');
       btnAz.classList.toggle('active', lang === 'az');
     }
-    // Açıq CVE kartlarının hündürlüyünü dil dəyişəndən sonra yenidən hesabla
-    document.querySelectorAll('.cve-card.collapsible.open .cve-body').forEach(body => {
+    // Açıq CVE və layihə kartlarının hündürlüyünü dil dəyişəndən sonra yenidən hesabla
+    document.querySelectorAll('.cve-card.collapsible.open .cve-body, .project-card.collapsible.open .project-body').forEach(body => {
       body.style.maxHeight = body.scrollHeight + 'px';
     });
   }

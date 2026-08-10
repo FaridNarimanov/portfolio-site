@@ -386,20 +386,33 @@ section.block h2 {
 /* ============ PROJECT CARDS ============ */
 .project-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-  padding: 28px; margin-bottom: 24px; transition: border-color 0.15s ease;
+  padding: 20px 26px; margin-bottom: 24px; transition: border-color 0.15s ease, padding 0.25s ease;
 }
 .project-card:hover { border-color: #2a3242; }
-.project-head {
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
-  flex-wrap: wrap; margin-bottom: 12px;
+.project-card.open { padding: 26px 26px 28px; }
+.project-top {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  width: 100%; background: none; border: none; margin: 0; padding: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
 }
+.project-top-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-width: 0; }
+.project-chevron {
+  display: inline-flex; flex-shrink: 0; color: var(--text-3); font-size: 20px; line-height: 1;
+  transition: transform .25s ease, color .25s ease; transform: rotate(0deg);
+}
+.project-card.open .project-chevron { transform: rotate(180deg); color: var(--accent); }
 .project-name { font-family: var(--disp); font-size: 22px; font-weight: 700; color: #fff; }
 .project-badge {
   font-family: var(--mono); font-size: 11px; color: var(--cyan);
   border: 1px solid var(--cyan-dim); padding: 4px 10px; border-radius: 4px;
   white-space: nowrap;
 }
-.project-tagline { font-family: var(--mono); font-size: 13px; color: var(--text-2); margin-bottom: 16px; }
+.project-tagline { font-family: var(--mono); font-size: 13px; color: var(--text-2); margin-top: 10px; }
+.project-body {
+  overflow: hidden; max-height: 0; opacity: 0;
+  transition: max-height .3s ease, opacity .25s ease, margin .3s ease;
+}
+.project-card.open .project-body { opacity: 1; margin-top: 16px; }
 .project-desc { color: var(--text-2); font-size: 14.5px; line-height: 1.7; max-width: 720px; margin-bottom: 18px; }
 .project-features { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 .project-features li { color: var(--text-2); font-size: 14px; padding-left: 18px; position: relative; line-height: 1.6; }
