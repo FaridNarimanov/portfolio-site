@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects - Farid Narimanov</title>
 <link rel="stylesheet" href="/style.css">
-<meta name="description" content="Custom offensive security tools and automation scripts built by Farid Narimanov.">
+<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Farid Narimanov">
 <meta property="og:title" content="Projects - Farid Narimanov">
-<meta property="og:description" content="Custom offensive security tools and automation scripts built by Farid Narimanov.">
+<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
 <meta property="og:url" content="https://faridnarimanov.com/projects/">
 <meta property="og:image" content="https://faridnarimanov.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects - Farid Narimanov">
-<meta name="twitter:description" content="Custom offensive security tools and automation scripts built by Farid Narimanov.">
+<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
 <meta name="twitter:image" content="https://faridnarimanov.com/og-image.png">
 <meta name="twitter:site" content="@FaridNarimanov">
 </head>
@@ -53,14 +53,50 @@
 <main class="content-wrap">
   <h1 class="page-title"><span class="lang-en">Projects & Tools</span><span class="lang-az">Layihələr və Alətlər</span></h1>
   <p class="page-lede lang-en">Custom offensive security tools, scripts, and automation utilities I am building for vulnerability assessments.</p>
-  <p class="page-lede lang-az">Penetration testing, avtomatlaşdırma və zəifliklərin kəşfiyyatı üçün hazırladığım xüsusi alətlər və skriptlər burada yerləşdiriləcək.</p>
+  <p class="page-lede lang-az">Penetration testing, avtomatlaşdırma və zəifliklərin kəşfiyyatı üçün hazırladığım xüsusi alətlər və skriptlər.</p>
 
   <section class="block">
+    <div class="project-card">
+      <div class="project-head">
+        <span class="project-name">secretpulse</span>
+        <span class="project-badge">Go · CLI</span>
+      </div>
+      <p class="project-tagline"><span class="lang-en">Git history secrets scanner with live validation</span><span class="lang-az">Canlı doğrulama ilə git tarixçəsi sirlər skaneri</span></p>
+
+      <p class="project-desc lang-en">Finds hardcoded secrets across a git repository's entire history — including ones deleted in a later commit — and checks which of them still work. Deleting a secret in a follow-up commit does not remove it from the repository; it stays in the object database, reachable by anyone who clones. Where most scanners stop at detection, secretpulse goes further: each candidate is validated against its provider's own read-only API and reported as ACTIVE, DEAD, or UNKNOWN.</p>
+      <p class="project-desc lang-az">Git repozitorisinin bütün tarixçəsində (sonrakı commit-lərdə silinmiş olsa belə) hardcoded sirləri tapır və onların hələ də işlək olub-olmadığını yoxlayır. Bir sirri sonrakı commit-də silmək onu repozitoridən çıxarmır — o, obyekt bazasında qalır və reponu klonlayan hər kəs üçün əlçatandır. Əksər skanerlər aşkarlamaqla kifayətlənir, secretpulse isə bir addım irəli gedir: tapılan hər namizəd öz provayderinin read-only API-si ilə doğrulanır və ACTIVE, DEAD, ya da UNKNOWN kimi hesabat verilir.</p>
+
+      <ul class="project-features">
+        <li class="lang-en">Detects GitHub PATs, AWS access/session keys, Stripe, Slack, SendGrid and Google API keys — pattern-based, no entropy noise</li>
+        <li class="lang-az">GitHub PAT, AWS access/session açarları, Stripe, Slack, SendGrid və Google API açarlarını aşkarlayır — pattern-əsaslı, entropy "gurultusu" olmadan</li>
+        <li class="lang-en">Live validation via each provider's read-only API — every request identifies itself honestly, nothing is modified or revoked</li>
+        <li class="lang-az">Hər provayderin read-only API-si ilə canlı doğrulama — hər sorğu özünü dürüst təqdim edir, heç nə dəyişdirilmir və ya ləğv edilmir</li>
+        <li class="lang-en">CI/CD gating with <code>--fail-on-active</code> — fails the build only on a confirmed live credential, never on UNKNOWN</li>
+        <li class="lang-az"><code>--fail-on-active</code> ilə CI/CD gating — build yalnız təsdiqlənmiş canlı credential tapılanda uğursuz olur, UNKNOWN-da heç vaxt</li>
+      </ul>
+
+      <div class="project-install"><span class="prompt">$</span>go install github.com/FaridNarimanov/secretpulse/cmd/secretpulse@latest</div>
+
+      <div class="project-footer">
+        <div class="tags">
+          <span class="tag">golang</span>
+          <span class="tag">security</span>
+          <span class="tag">devsecops</span>
+          <span class="tag">secret-scanning</span>
+          <span class="tag">pentesting</span>
+        </div>
+        <a class="social-btn" href="https://github.com/FaridNarimanov/secretpulse" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
+        </a>
+      </div>
+    </div>
+
     <div class="empty-state">
       <span class="glyph">git init</span>
-      <h3><span class="lang-en">Tools in Active Development</span><span class="lang-az">Alətlər Hazırlanır</span></h3>
-      <p class="lang-en">I am currently developing specialized reconnaissance and scanning tools. As repositories reach release status, they will be published here with documentation — follow my GitHub to stay updated.</p>
-      <p class="lang-az">Hazırda kəşfiyyat və zəiflik skanlaması üzrə xüsusi alətlərim üzərində çalışıram. Layihələr hazıra gəldikcə kod bazası ilə birlikdə burada paylaşılacaq — yenilikləri izləmək üçün GitHub profilimə göz atın.</p>
+      <h3><span class="lang-en">More Tools in Active Development</span><span class="lang-az">Digər Alətlər Hazırlanır</span></h3>
+      <p class="lang-en">I am currently developing additional reconnaissance and scanning tools. As repositories reach release status, they will be published here with documentation — follow my GitHub to stay updated.</p>
+      <p class="lang-az">Hazırda əlavə kəşfiyyat və zəiflik skanlaması üzrə alətlər üzərində çalışıram. Layihələr hazıra gəldikcə kod bazası ilə birlikdə burada paylaşılacaq — yenilikləri izləmək üçün GitHub profilimə göz atın.</p>
     </div>
   </section>
 </main>

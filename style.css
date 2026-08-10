@@ -78,6 +78,10 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+code {
+  font-family: var(--mono); font-size: 0.9em; color: var(--cyan);
+  background: rgba(45, 224, 201, 0.08); padding: 2px 6px; border-radius: 3px;
+}
 ::selection { background: var(--accent); color: #0a0d12; }
 
 /* Scrollbar */
@@ -378,6 +382,35 @@ section.block h2 {
 }
 .empty-state h3 { font-family: var(--disp); font-size: 20px; margin-bottom: 8px; }
 .empty-state p { color: var(--text-2); font-size: 14px; max-width: 440px; margin: 0 auto; }
+
+/* ============ PROJECT CARDS ============ */
+.project-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 28px; margin-bottom: 24px; transition: border-color 0.15s ease;
+}
+.project-card:hover { border-color: #2a3242; }
+.project-head {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+  flex-wrap: wrap; margin-bottom: 12px;
+}
+.project-name { font-family: var(--disp); font-size: 22px; font-weight: 700; color: #fff; }
+.project-badge {
+  font-family: var(--mono); font-size: 11px; color: var(--cyan);
+  border: 1px solid var(--cyan-dim); padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap;
+}
+.project-tagline { font-family: var(--mono); font-size: 13px; color: var(--text-2); margin-bottom: 16px; }
+.project-desc { color: var(--text-2); font-size: 14.5px; line-height: 1.7; max-width: 720px; margin-bottom: 18px; }
+.project-features { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.project-features li { color: var(--text-2); font-size: 14px; padding-left: 18px; position: relative; line-height: 1.6; }
+.project-features li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 12px; }
+.project-install {
+  font-family: var(--mono); font-size: 12.5px; color: var(--text-1);
+  background: var(--bg-raised); border: 1px solid var(--border-soft); border-radius: 5px;
+  padding: 12px 16px; margin-bottom: 20px; overflow-x: auto; white-space: nowrap;
+}
+.project-install .prompt { color: var(--sev-info); margin-right: 8px; }
+.project-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 
 /* ============ FOOTER ============ */
 footer.main-footer {
