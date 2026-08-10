@@ -262,6 +262,48 @@
     <div class="cve-card collapsible">
       <button class="cve-top" type="button" aria-expanded="false">
         <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-18035</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">User Access Manager &lt; 2.3.15 — Unauthenticated Restricted Content Disclosure via REST API</div>
+        <p class="cve-desc lang-en">The plugin does not apply its access restrictions to REST API requests, allowing unauthenticated attackers to read the content of posts, pages and custom post types that have been restricted to specific user groups.</p>
+        <p class="cve-desc lang-az">Plugin giriş məhdudiyyətlərini REST API sorğularına tətbiq etmir. Bu, autentifikasiyasız hücumçulara müəyyən istifadəçi qruplarına məhdudlaşdırılmış yazı, səhifə və xüsusi post tiplərinin məzmununu oxumağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">User Access Manager &lt; 2.3.15</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">2.3.15</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-10</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/9c5cae62-4c4c-434b-ae40-4654b257803f/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18357</span>
         </span>
         <span class="cve-top-right">
@@ -340,6 +382,48 @@
         </div>
 
         <a class="cve-link" href="https://wpscan.com/vulnerability/f87c5a11-59a1-47cc-bc1c-d12108b510ab/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-18943</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">WPC Admin Columns &lt; 2.3.4 — Subscriber+ Arbitrary User/Post/Term Meta Disclosure</div>
+        <p class="cve-desc lang-en">The plugin does not have authorisation checks in one of its AJAX actions, allowing users with a role as low as subscriber to read arbitrary user, post and term metadata, including data belonging to administrators.</p>
+        <p class="cve-desc lang-az">Plugin öz AJAX action-larından birində icazə yoxlaması aparmır. Bu, subscriber qədər aşağı rola malik istifadəçilərə inzibatçılara aid olanlar daxil olmaqla istənilən istifadəçi, yazı və termin metadata-sını oxumağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">6.5 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:65%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-200 · Exposure of Sensitive Information</span><span class="lang-az">CWE-200 · Həssas Məlumatın Açıqlanması</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WPC Admin Columns &lt; 2.3.4</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">2.3.4</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-10</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/9f2f3db0-1031-4e16-96f2-12a02b97ad06/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
 
@@ -430,6 +514,48 @@
     <div class="cve-card collapsible">
       <button class="cve-top" type="button" aria-expanded="false">
         <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-18962</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">WP Photo Album Plus &lt; 9.2.09.002 — Subscriber+ Cross-Album File Upload via Missing Authorization</div>
+        <p class="cve-desc lang-en">The plugin does not check that the current user is allowed to upload into the album they target when it processes a front-end upload, allowing any authenticated user, such as a Subscriber, to upload files into albums owned by other users or by the administrator. Exploitation requires the plugin's front-end user upload feature to be enabled, which is not the default.</p>
+        <p class="cve-desc lang-az">Plugin, front-end yükləməni emal edərkən cari istifadəçinin hədəflədiyi albuma yükləməyə icazəsi olub-olmadığını yoxlamır. Bu, Subscriber kimi istənilən autentifikasiya olunmuş istifadəçiyə başqa istifadəçilərə və ya administratora aid albomlara fayl yükləməyə imkan verir. İstismar üçün plugin-in front-end istifadəçi yükləmə funksiyası aktiv olmalıdır, bu isə default deyil.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">4.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:43%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-639 · Authorization Bypass Through User-Controlled Key</span><span class="lang-az">CWE-639 · İstifadəçi Nəzarətli Açarla Səlahiyyət Aşımı</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WP Photo Album Plus &lt; 9.2.09.002</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">9.2.09.002</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-10</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/146079f7-d4e5-4f1e-a715-f681fc33ed6a/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19089</span>
         </span>
         <span class="cve-top-right">
@@ -466,22 +592,7 @@
     <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px;">
       <div class="cve-card reserved" style="margin-bottom:0;">
         <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-18035</span>
-        </div>
-      </div>
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-18943</span>
-        </div>
-      </div>
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
           <span class="cve-id" style="font-size:15px;">CVE-2026-18945</span>
-        </div>
-      </div>
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-18962</span>
         </div>
       </div>
       <div class="cve-card reserved" style="margin-bottom:0;">
