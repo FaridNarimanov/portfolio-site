@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects - Farid Narimanov</title>
 <link rel="stylesheet" href="/style.css">
-<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
+<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Farid Narimanov">
 <meta property="og:title" content="Projects - Farid Narimanov">
-<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
+<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
 <meta property="og:url" content="https://faridnarimanov.com/projects/">
 <meta property="og:image" content="https://faridnarimanov.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects - Farid Narimanov">
-<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including secretpulse — a Go-based git history secrets scanner with live credential validation.">
+<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
 <meta name="twitter:image" content="https://faridnarimanov.com/og-image.png">
 <meta name="twitter:site" content="@FaridNarimanov">
 </head>
@@ -56,6 +56,42 @@
   <p class="page-lede lang-az">Penetration testing, avtomatlaşdırma və zəifliklərin kəşfiyyatı üçün hazırladığım xüsusi alətlər və skriptlər.</p>
 
   <section class="block">
+    <div class="project-card">
+      <div class="project-head">
+        <span class="project-name">wp-plugin-auditor</span>
+        <span class="project-badge">Python · tree-sitter</span>
+      </div>
+      <p class="project-tagline"><span class="lang-en">Static analysis for missing authorization checks in WordPress plugins</span><span class="lang-az">WordPress pluginlərində çatışmayan icazə yoxlamaları üçün statik analiz</span></p>
+
+      <p class="project-desc lang-en">Finds AJAX and REST API handlers that are reachable without a nonce, capability, or ownership check. Most PHP static analyzers are taint-based — they track user input to a dangerous sink — but missing authorization has no data flow to trace; the bug is the absence of a check. This tool instead models WordPress's own hook/permission system directly: it resolves every callback to its full body, scans for known auth checkpoints, and flags entry points where none exist, including a heuristic pass for IDOR-shaped access. Validated against real CVEs (Plugin Optimizer, Simply Schedule Appointments) with zero false positives, and against a ~9,000-file corpus including WooCommerce, Elementor and WPForms to keep clean codebases clean.</p>
+      <p class="project-desc lang-az">Nonce, icazə (capability) və ya sahiblik yoxlaması olmadan əlçatan olan AJAX və REST API handler-lərini tapır. Əksər PHP statik analizatorları taint-əsaslıdır — istifadəçi girişini təhlükəli "sink"ə qədər izləyir — amma çatışmayan icazə yoxlamasının izlənəcək data axını yoxdur; buq elə yoxlamanın olmamasıdır. Bu alət əvəzinə birbaşa WordPress-in öz hook/icazə sistemini modelləşdirir: hər callback-i tam body-sinə qədər həll edir, məlum auth checkpoint-lərini axtarır və heç birinin olmadığı giriş nöqtələrini işarələyir, IDOR-formalı girişlər üçün heuristik yoxlama da daxil olmaqla. Real CVE-lər üzərində (Plugin Optimizer, Simply Schedule Appointments) sıfır yalnış-pozitiv nəticə ilə, həmçinin WooCommerce, Elementor və WPForms daxil olmaqla ~9,000 fayllıq korpus üzərində doğrulanıb.</p>
+
+      <ul class="project-features">
+        <li class="lang-en">Six detection patterns — nopriv AJAX with no checkpoint, missing/weak REST permission_callback, privileged handlers gated only by a nonce, site-wide-nonce object access, and an IDOR ownership heuristic</li>
+        <li class="lang-az">Altı aşkarlama pattern-i — checkpoint-siz nopriv AJAX, çatışmayan/zəif REST permission_callback, yalnız nonce ilə "qorunan" imtiyazlı handler-lər, site-wide nonce ilə obyekt girişi və IDOR sahiblik heuristikası</li>
+        <li class="lang-en">Every finding carries a confidence level — Firm for a structural absence, Candidate for a heuristic match that needs human review</li>
+        <li class="lang-az">Hər tapıntı confidence səviyyəsi daşıyır — struktur baxımından aydın olanlar üçün Firm, insan yoxlaması tələb edən heuristik uyğunluqlar üçün Candidate</li>
+        <li class="lang-en">Text, JSON, or self-contained HTML reports — exits non-zero on any HIGH severity finding for CI gating</li>
+        <li class="lang-az">Text, JSON, ya da özündə tam olan HTML hesabatlar — CI gating üçün istənilən HIGH severity tapıntısında qeyri-sıfır exit code</li>
+      </ul>
+
+      <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/wp-plugin-auditor && cd wp-plugin-auditor && pip install -r requirements.txt</div>
+
+      <div class="project-footer">
+        <div class="tags">
+          <span class="tag">python</span>
+          <span class="tag">wordpress-security</span>
+          <span class="tag">static-analysis</span>
+          <span class="tag">sast</span>
+          <span class="tag">cwe-862</span>
+        </div>
+        <a class="social-btn" href="https://github.com/FaridNarimanov/wp-plugin-auditor" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
+        </a>
+      </div>
+    </div>
+
     <div class="project-card">
       <div class="project-head">
         <span class="project-name">secretpulse</span>
@@ -90,13 +126,6 @@
           <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
         </a>
       </div>
-    </div>
-
-    <div class="empty-state">
-      <span class="glyph">git init</span>
-      <h3><span class="lang-en">More Tools in Active Development</span><span class="lang-az">Digər Alətlər Hazırlanır</span></h3>
-      <p class="lang-en">I am currently developing additional reconnaissance and scanning tools. As repositories reach release status, they will be published here with documentation — follow my GitHub to stay updated.</p>
-      <p class="lang-az">Hazırda əlavə kəşfiyyat və zəiflik skanlaması üzrə alətlər üzərində çalışıram. Layihələr hazıra gəldikcə kod bazası ilə birlikdə burada paylaşılacaq — yenilikləri izləmək üçün GitHub profilimə göz atın.</p>
     </div>
   </section>
 </main>
