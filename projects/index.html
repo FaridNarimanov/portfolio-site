@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects - Farid Narimanov</title>
 <link rel="stylesheet" href="/style.css">
-<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
+<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Farid Narimanov">
 <meta property="og:title" content="Projects - Farid Narimanov">
-<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
+<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
 <meta property="og:url" content="https://faridnarimanov.com/projects/">
 <meta property="og:image" content="https://faridnarimanov.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects - Farid Narimanov">
-<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor (WordPress authorization static analysis) and secretpulse (git history secrets scanner with live validation).">
+<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
 <meta name="twitter:image" content="https://faridnarimanov.com/og-image.png">
 <meta name="twitter:site" content="@FaridNarimanov">
 </head>
@@ -122,6 +122,42 @@
           <span class="tag">pentesting</span>
         </div>
         <a class="social-btn" href="https://github.com/FaridNarimanov/secretpulse" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-head">
+        <span class="project-name">bolahunter</span>
+        <span class="project-badge">Go · CLI</span>
+      </div>
+      <p class="project-tagline"><span class="lang-en">REST API authorization scanner — BOLA/IDOR, JWT bypass, mass assignment</span><span class="lang-az">REST API səlahiyyət skaneri — BOLA/IDOR, JWT bypass, mass assignment</span></p>
+
+      <p class="project-desc lang-en">A CLI scanner that tests a REST API for authorization vulnerabilities straight from an OpenAPI/Swagger spec and a set of test identities: BOLA/IDOR (one user reaching another user's objects), broken JWT authentication (alg:none, unsigned tokens, kid header injection), and mass assignment (write endpoints accepting privilege-sensitive fields the client should never control). It parses the spec, discovers which endpoints require auth, and fires cross-user, forged-token, and over-posted requests at them — authorization is exactly the class of bug a spec alone cannot reason about, since it takes actually trying one user's token against another user's data to know.</p>
+      <p class="project-desc lang-az">OpenAPI/Swagger spesifikasiyası və test identity dəstindən istifadə edərək REST API-ni səlahiyyət zəiflikləri üzrə test edən CLI skaneri: BOLA/IDOR (bir istifadəçinin başqasının obyektinə çatması), pozulmuş JWT autentifikasiyası (alg:none, imzalanmamış token-lər, kid header injection) və mass assignment (client-in heç vaxt idarə etməməli olduğu imtiyaz-həssas sahələri qəbul edən yazma endpoint-ləri). Spesifikasiyanı oxuyur, hansı endpoint-lərin autentifikasiya tələb etdiyini müəyyən edir və onlara cross-user, saxta token və "over-posted" sorğular göndərir — səlahiyyət tam olaraq spesifikasiyanın tək başına həll edə bilmədiyi bug tipidir, çünki bunu bilmək üçün həqiqətən bir istifadəçinin token-ini başqasının datası üzərində sınamaq lazımdır.</p>
+
+      <ul class="project-features">
+        <li class="lang-en">BOLA/IDOR findings require both a 200 status and the victim's own identifier present in the attacker's response — a raw 200 alone is never enough</li>
+        <li class="lang-az">BOLA/IDOR tapıntıları həm 200 statusu, həm də qurbanın öz identifikatorunun hücumçunun cavabında olmasını tələb edir — tək başına 200 status heç vaxt kifayət deyil</li>
+        <li class="lang-en">JWT module tests alg:none, unsigned and weakly-signed tokens, expired-token acceptance, and kid injection — with tampered-signature and anonymous controls first, so a public endpoint can't masquerade as a bypass</li>
+        <li class="lang-az">JWT modulu alg:none, imzalanmamış/zəif imzalanmış token-ləri, müddəti bitmiş token qəbulunu və kid injection-u test edir — əvvəlcə saxta-imza və anonim kontrol sorğuları göndərilir ki, ictimai endpoint bypass kimi görünməsin</li>
+        <li class="lang-en">Findings scored Critical/High/Medium, mass-assignment persistence verified via re-fetch where possible — always asks for scope confirmation before sending any test traffic</li>
+        <li class="lang-az">Tapıntılar Critical/High/Medium olaraq bal alır, mass-assignment persistence mümkün olduqda yenidən sorğu ilə təsdiqlənir — hər hansı test trafiki göndərilmədən əvvəl həmişə əhatə dairəsinin təsdiqini soruşur</li>
+      </ul>
+
+      <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/bolahunter && cd bolahunter && go build -o bolahunter ./cmd/bolahunter</div>
+
+      <div class="project-footer">
+        <div class="tags">
+          <span class="tag">golang</span>
+          <span class="tag">api-security</span>
+          <span class="tag">bola-idor</span>
+          <span class="tag">jwt</span>
+          <span class="tag">pentest</span>
+        </div>
+        <a class="social-btn" href="https://github.com/FaridNarimanov/bolahunter" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
         </a>
