@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects - Farid Narimanov</title>
 <link rel="stylesheet" href="/style.css">
-<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
+<meta name="description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, reconductor (recon aggregator), secretpulse (secrets scanner), and bolahunter (API authorization scanner).">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Farid Narimanov">
 <meta property="og:title" content="Projects - Farid Narimanov">
-<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
+<meta property="og:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, reconductor (recon aggregator), secretpulse (secrets scanner), and bolahunter (API authorization scanner).">
 <meta property="og:url" content="https://faridnarimanov.com/projects/">
 <meta property="og:image" content="https://faridnarimanov.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects - Farid Narimanov">
-<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, secretpulse, and bolahunter — an API BOLA/IDOR and JWT authorization scanner.">
+<meta name="twitter:description" content="Custom offensive security tools built by Farid Narimanov, including wp-plugin-auditor, reconductor (recon aggregator), secretpulse (secrets scanner), and bolahunter (API authorization scanner).">
 <meta name="twitter:image" content="https://faridnarimanov.com/og-image.png">
 <meta name="twitter:site" content="@FaridNarimanov">
 </head>
@@ -86,6 +86,42 @@
           <span class="tag">cwe-862</span>
         </div>
         <a class="social-btn" href="https://github.com/FaridNarimanov/wp-plugin-auditor" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-head">
+        <span class="project-name">reconductor</span>
+        <span class="project-badge">Go · CLI</span>
+      </div>
+      <p class="project-tagline"><span class="lang-en">All-in-one recon aggregator for the early stages of a pentest</span><span class="lang-az">Pentest-in ilkin mərhələləri üçün hərtərəfli recon aqreqatoru</span></p>
+
+      <p class="project-desc lang-en">Give it a domain, IP, or CIDR range and it orchestrates subfinder, httpx, naabu, nmap, whatweb and feroxbuster into a single pipeline, each stage feeding the next, then renders the results as a colorized terminal summary plus JSON and self-contained HTML reports. Nine additional pure-Go modules run automatically afterward — DNS brute-force, JS endpoint extraction, origin-IP discovery behind CDNs, Wayback URL history, WAF fingerprinting, S3/GCS bucket probing, and passive-to-aggressive Active Directory detection (DNS SRV records, then LDAP anonymous bind, SMB null-session enumeration, and Kerberos user enumeration). Written in Go using only the standard library — external tools are invoked via os/exec, so building it pulls in no third-party modules, and every module is fault-tolerant: a missing tool or timeout is recorded in the report and the pipeline keeps going.</p>
+      <p class="project-desc lang-az">Domen, IP və ya CIDR aralığı ver, o da subfinder, httpx, naabu, nmap, whatweb və feroxbuster-i tək bir pipeline-da ardıcıl işlədir (hər mərhələ növbətini bəsləyir), sonra nəticələri rəngli terminal xülasəsi, JSON və özündə tam olan HTML hesabat kimi göstərir. Bundan sonra doqquz əlavə saf-Go modulu avtomatik işə düşür — DNS brute-force, JS endpoint çıxarılması, CDN arxasında origin-IP kəşfi, Wayback URL tarixçəsi, WAF fingerprinting, S3/GCS bucket yoxlaması və passiv-dən aqressivə Active Directory aşkarlaması (DNS SRV qeydləri, sonra LDAP anonim bind, SMB null-session sayılması və Kerberos istifadəçi sayılması). Yalnız standart kitabxana istifadə edərək Go-da yazılıb — xarici alətlər os/exec vasitəsilə çağırılır, ona görə build zamanı heç bir üçüncü tərəf modulu yüklənmir; hər modul xəta-davamlıdır — çatışmayan alət və ya timeout hesabatda qeyd olunur, pipeline isə davam edir.</p>
+
+      <ul class="project-features">
+        <li class="lang-en">Six-stage core pipeline (subdomain discovery → live-host/tech-detect → fast port scan → deep service detection → CMS fingerprint → content discovery), each stage's output feeding the next</li>
+        <li class="lang-az">Altı mərhələli əsas pipeline (subdomain kəşfi → canlı host/tech-detect → sürətli port skan → dərin servis aşkarlaması → CMS fingerprint → məzmun kəşfi), hər mərhələnin çıxışı növbətini bəsləyir</li>
+        <li class="lang-en">Zero configuration by default — key-optional sources (Shodan, Censys) activate automatically when their environment variables are set, otherwise skipped with a note in the report</li>
+        <li class="lang-az">Default olaraq sıfır konfiqurasiya — key-optional mənbələr (Shodan, Censys) yalnız environment dəyişənləri təyin olunduqda avtomatik aktivləşir, əks halda hesabatda qeydlə keçilir</li>
+        <li class="lang-en">CIDR scans require a typed authorization confirmation before anything runs; --aggressive gates full-port scans, active DNS brute-force, and AD/Kerberos enumeration behind an explicit flag</li>
+        <li class="lang-az">CIDR skanları başlamazdan əvvəl yazılı təsdiq tələb edir; --aggressive tam-port skanları, aktiv DNS brute-force və AD/Kerberos sayılmasını ayrıca flag arxasında saxlayır</li>
+      </ul>
+
+      <div class="project-install"><span class="prompt">$</span>git clone https://github.com/FaridNarimanov/reconductor && cd reconductor && go build -o reconductor ./cmd/reconductor</div>
+
+      <div class="project-footer">
+        <div class="tags">
+          <span class="tag">golang</span>
+          <span class="tag">reconnaissance</span>
+          <span class="tag">osint</span>
+          <span class="tag">active-directory</span>
+          <span class="tag">pentesting</span>
+        </div>
+        <a class="social-btn" href="https://github.com/FaridNarimanov/reconductor" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           <span class="lang-en">View on GitHub →</span><span class="lang-az">GitHub-da bax →</span>
         </a>
