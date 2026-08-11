@@ -430,6 +430,48 @@
     <div class="cve-card collapsible">
       <button class="cve-top" type="button" aria-expanded="false">
         <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-18945</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">WP Helper Premium &lt; 4.7.6 — Unauthenticated Order Data Disclosure and Order Manipulation via Missing Order Key Validation</div>
+        <p class="cve-desc lang-en">The plugin does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers' order details, including personal information, as well as change the state of arbitrary orders. Exploitation requires WooCommerce to be active and the plugin's optional order confirmation page module to be enabled.</p>
+        <p class="cve-desc lang-az">Plugin öz xüsusi sifariş təsdiq səhifəsini göstərərkən və ya əlaqəli AJAX action-larını icra edərkən sifariş açarını (order key) doğrulamır. Bu, autentifikasiyasız istifadəçilərə şəxsi məlumatlar daxil olmaqla başqa müştərilərin sifariş detallarını görməyə, həmçinin istənilən sifarişin vəziyyətini dəyişməyə imkan verir. İstismar üçün WooCommerce aktiv olmalı və plugin-in könüllü sifariş təsdiq səhifəsi modulu aktivləşdirilməlidir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">8.2 · <span class="lang-en">High</span><span class="lang-az">Yüksək</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:82%; background:var(--sev-high);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-639 · Authorization Bypass Through User-Controlled Key</span><span class="lang-az">CWE-639 · İstifadəçi Nəzarətli Açarla Səlahiyyət Aşımı</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WP Helper Premium &lt; 4.7.6</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">4.7.6</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-11</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/0d43b739-90de-4bae-90c1-3acaee8888e6/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18946</span>
         </span>
         <span class="cve-top-right">
@@ -556,6 +598,48 @@
     <div class="cve-card collapsible">
       <button class="cve-top" type="button" aria-expanded="false">
         <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-19088</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">ShopEngine &lt; 4.9.3 — Customer PII Disclosure via Forced Authentication</div>
+        <p class="cve-desc lang-en">The plugin does not protect one of its authentication endpoints against CSRF, allowing an attacker to log a victim into an attacker-controlled account, so that the billing and shipping details the victim then enters at checkout are stored under and readable by the attacker.</p>
+        <p class="cve-desc lang-az">Plugin öz autentifikasiya endpoint-lərindən birini CSRF-dən qorumur. Bu, hücumçuya qurbanı hücumçunun idarə etdiyi hesaba daxil etməyə imkan verir, nəticədə qurbanın checkout zamanı daxil etdiyi hesab-faktura və çatdırılma məlumatları hücumçunun hesabında saxlanılır və onun tərəfindən oxuna bilir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.4 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:54%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-352 · Cross-Site Request Forgery</span><span class="lang-az">CWE-352 · Cross-Site Request Forgery</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">ShopEngine &lt; 4.9.3</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">4.9.3</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-11</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/f58066e9-8066-43bc-8778-7ded279e8ee2/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19089</span>
         </span>
         <span class="cve-top-right">
@@ -585,28 +669,6 @@
         <a class="cve-link" href="https://wpscan.com/vulnerability/c5728a31-de92-40df-ab19-aec4db84ba21/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="lang-en">Reserved (details coming soon)</span><span class="lang-az">Reserved (Detallar tezliklə açıqlanacaq)</span></h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px;">
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-18945</span>
-        </div>
-      </div>
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-19088</span>
-        </div>
-      </div>
-    </div>
-    <p class="lang-en" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
-      These IDs are officially registered with WPScan but awaiting coordinated public disclosure. Full technical breakdowns will be published here upon release.
-    </p>
-    <p class="lang-az" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
-      Bu ID-lər WPScan tərəfindən qeydə alınıb, lakin koordinasiyalı açıqlama müddətini gözləyir. İctimaiyyətə açıqlandıqdan sonra tam texniki detallar bura əlavə ediləcək.
-    </p>
   </section>
 </main>
 
