@@ -879,23 +879,48 @@
         <a class="cve-link" href="https://wpscan.com/vulnerability/fd10aaab-d358-4d2f-aafa-dbfba09b7fff/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
-  </section>
 
-  <section class="block">
-    <h2><span class="lang-en">Reserved (details coming soon)</span><span class="lang-az">Reserved (Detallar tezliklə açıqlanacaq)</span></h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px;">
-      <div class="cve-card reserved" style="margin-bottom:0;">
-        <div class="cve-top" style="margin-bottom:0;">
-          <span class="cve-id" style="font-size:15px;">CVE-2026-19715</span>
+    <div class="cve-card collapsible">
+      <button class="cve-top" type="button" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-19715</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </button>
+      <div class="cve-body">
+        <div class="cve-title">WP OAuth Server &lt; 6.3.1 — Unauthenticated OAuth Token and User Data Disclosure via Debug Log File</div>
+        <p class="cve-desc lang-en">The plugin does not restrict access to the debug log it writes, which is stored at a fixed and publicly reachable location, allowing unauthenticated users to read the OAuth tokens and authorisation codes it has issued as well as user records including password hashes when debug logging is enabled.</p>
+        <p class="cve-desc lang-az">Plugin yazdığı debug log-a girişi məhdudlaşdırmır — bu log sabit və ictimai əlçatan bir ünvanda saxlanılır. Bu, debug logging aktiv olduqda autentifikasiyasız istifadəçilərə plugin-in verdiyi OAuth token-ləri və avtorizasiya kodlarını, həmçinin şifrə hash-ləri daxil olmaqla istifadəçi qeydlərini oxumağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">7.5 · <span class="lang-en">High</span><span class="lang-az">Yüksək</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:75%; background:var(--sev-high);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-200 · Exposure of Sensitive Information</span><span class="lang-az">CWE-200 · Həssas Məlumatın Açıqlanması</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WP OAuth Server &lt; 6.3.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">6.3.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-08-14</span>
+          </div>
         </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/94987bd9-7ac2-44fd-93df-52892c2a4622/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
-    <p class="lang-en" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
-      These IDs are officially registered with WPScan but awaiting coordinated public disclosure. Full technical breakdowns will be published here upon release.
-    </p>
-    <p class="lang-az" style="color:var(--text-3); font-family:var(--mono); font-size:12px; margin-top:16px;">
-      Bu ID-lər WPScan tərəfindən qeydə alınıb, lakin koordinasiyalı açıqlama müddətini gözləyir. İctimaiyyətə açıqlandıqdan sonra tam texniki detallar bura əlavə ediləcək.
-    </p>
   </section>
 </main>
 
