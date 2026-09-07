@@ -347,10 +347,11 @@ section.block h2 {
 }
 .cve-card.open .cve-chevron { transform: rotate(180deg); color: var(--accent); }
 .cve-body {
-  overflow: hidden; max-height: 0; opacity: 0; margin-top: 0;
-  transition: max-height .3s ease, opacity .25s ease, margin-top .3s ease;
+  overflow: hidden; max-height: 0; opacity: 0; margin-top: 0; padding-top: 0;
+  border-top: 1px solid transparent;
+  transition: max-height .3s ease, opacity .25s ease, margin-top .3s ease, padding-top .3s ease, border-color .25s ease;
 }
-.cve-card.open .cve-body { opacity: 1; margin-top: 16px; }
+.cve-card.open .cve-body { opacity: 1; margin-top: 16px; padding-top: 16px; border-top-color: var(--border); }
 .cve-id { font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--text-1); }
 .cve-status {
   font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
