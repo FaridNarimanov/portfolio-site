@@ -67,10 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = card.querySelector('.cve-body');
     if (!toggle || !body) return;
 
-    toggle.addEventListener('click', () => {
+    const toggleCard = () => {
       const isOpen = card.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+    };
+
+    toggle.addEventListener('click', toggleCard);
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleCard();
+      }
     });
   });
 });

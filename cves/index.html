@@ -59,14 +59,14 @@
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-16561</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Sunshine Photo Cart &lt; 3.6.12 — Unauthenticated Private Gallery Comment Disclosure</div>
         <p class="cve-desc lang-en">The plugin does not perform access control checks in one of its AJAX actions, allowing unauthenticated users to retrieve the comments of images belonging to private, password-protected, or otherwise access-restricted galleries.</p>
@@ -101,14 +101,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-16619</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">miniOrange 2FA &lt; 6.2.8 — 2FA Bypass via Unlimited Second-Factor Attempts</div>
         <p class="cve-desc lang-en">The plugin does not correctly limit the number of second-factor verification attempts, tracking them against a client-supplied identifier that is reissued on every login, allowing an attacker who already knows a user's password to guess the one-time code without limit and take over the account.</p>
@@ -134,14 +134,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-16734</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Stripe Payment Forms by WP Full Pay &lt; 8.5.2 — Unauthenticated Payment Intent Amount Manipulation</div>
         <p class="cve-desc lang-en">The plugin does not verify that the caller owns the Stripe payment intent referenced by two unauthenticated payment-form AJAX actions, allowing an unauthenticated visitor to change the amount of a payment intent that the plugin then updates server-side through the Stripe API using the store's secret key. An ownership check added in 8.5.0 was applied to only one handler, leaving the pricing-recalculation and payment-intent-update actions unprotected.</p>
@@ -176,14 +176,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-17541</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Bit File Manager &lt; 6.9.1 — Unauthenticated File Activity Log Disclosure</div>
         <p class="cve-desc lang-en">The plugin does not have authorisation checks on one of its REST API routes, allowing unauthenticated users to read its file activity log, disclosing the file operations performed on the site, the paths involved and the name of the user who performed them.</p>
@@ -218,14 +218,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18032</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WP Data Access &lt; 5.5.79 — Unauthenticated Sensitive Data Disclosure via Autocomplete Column Authorization Bypass</div>
         <p class="cve-desc lang-en">The plugin does not validate the column names it accepts on one of its unauthenticated AJAX actions, and the nonce guarding that action does not cover them, allowing unauthenticated attackers to read arbitrary columns of the database table the affected front-end form is bound to, including user password hashes where that table is the users table.</p>
@@ -260,14 +260,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18035</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">User Access Manager &lt; 2.3.15 — Unauthenticated Restricted Content Disclosure via REST API</div>
         <p class="cve-desc lang-en">The plugin does not apply its access restrictions to REST API requests, allowing unauthenticated attackers to read the content of posts, pages and custom post types that have been restricted to specific user groups.</p>
@@ -302,14 +302,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18357</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WPC Order Tip for WooCommerce &lt; 3.3.1 — Unauthenticated Order Data Disclosure</div>
         <p class="cve-desc lang-en">The plugin does not perform authorisation or nonce checks in one of its reporting features, allowing unauthenticated attackers to retrieve sensitive order data belonging to any customer of the store, such as billing names, order IDs and statuses, fee amounts and order dates.</p>
@@ -344,14 +344,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18934</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">RSS Aggregator by Feedzy &lt; 5.2.6 — Author+ Cross-User Import Job Manipulation and Post Deletion</div>
         <p class="cve-desc lang-en">The plugin does not verify that the requesting user owns or is allowed to edit the import job named in the request, allowing users with author-level access and above to permanently delete the posts created by another user's import job, reset its deduplication and scheduling state, disable it, or clear its error log. One of the affected actions performs no object-type check either, so arbitrary posts and pages can also be unpublished regardless of who owns them.</p>
@@ -386,14 +386,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18943</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WPC Admin Columns &lt; 2.3.4 — Subscriber+ Arbitrary User/Post/Term Meta Disclosure</div>
         <p class="cve-desc lang-en">The plugin does not have authorisation checks in one of its AJAX actions, allowing users with a role as low as subscriber to read arbitrary user, post and term metadata, including data belonging to administrators.</p>
@@ -428,14 +428,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18945</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WP Helper Premium &lt; 4.7.6 — Unauthenticated Order Data Disclosure and Order Manipulation via Missing Order Key Validation</div>
         <p class="cve-desc lang-en">The plugin does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers' order details, including personal information, as well as change the state of arbitrary orders. Exploitation requires WooCommerce to be active and the plugin's optional order confirmation page module to be enabled.</p>
@@ -470,14 +470,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18946</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Contact Form to Any API &lt; 3.0.7 — Unauthenticated Sensitive File Disclosure via Predictable Filename</div>
         <p class="cve-desc lang-en">The plugin does not use a random filename when copying files uploaded through contact forms into a publicly accessible directory, allowing unauthenticated attackers to enumerate and download files submitted by other users.</p>
@@ -512,14 +512,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18960</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Block User Account &lt; 2.0.1 — Subscriber+ Account Block Bypass via Application Passwords</div>
         <p class="cve-desc lang-en">The plugin does not enforce its account block on every authentication path, allowing a blocked user who holds an application password created before the block to retain their full role-level read and write access through the REST API.</p>
@@ -554,14 +554,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-18962</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WP Photo Album Plus &lt; 9.2.09.002 — Subscriber+ Cross-Album File Upload via Missing Authorization</div>
         <p class="cve-desc lang-en">The plugin does not check that the current user is allowed to upload into the album they target when it processes a front-end upload, allowing any authenticated user, such as a Subscriber, to upload files into albums owned by other users or by the administrator. Exploitation requires the plugin's front-end user upload feature to be enabled, which is not the default.</p>
@@ -596,14 +596,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19088</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">ShopEngine &lt; 4.9.3 — Customer PII Disclosure via Forced Authentication</div>
         <p class="cve-desc lang-en">The plugin does not protect one of its authentication endpoints against CSRF, allowing an attacker to log a victim into an attacker-controlled account, so that the billing and shipping details the victim then enters at checkout are stored under and readable by the attacker.</p>
@@ -638,14 +638,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19089</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Product Input Fields for WooCommerce &lt; 2.0.2 — Unauthenticated Arbitrary File Upload</div>
         <p class="cve-desc lang-en">The plugin does not validate uploaded file types when its accepted-types setting is left empty, which its own documentation advertises as accepting all files, allowing unauthenticated attackers to upload arbitrary files and achieve remote code execution on servers that do not honour the directory's access rules.</p>
@@ -671,14 +671,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19711</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Premium Packages – Sell Digital Products Securely &lt; 7.0.7 — Subscriber+ Arbitrary Amount Withdrawal Request</div>
         <p class="cve-desc lang-en">The plugin does not validate a withdrawal request against the requesting user's actual earned balance, allowing any authenticated user, including a subscriber with no sales at all, to submit a payout request for an arbitrary amount, which an administrator may then approve and pay out.</p>
@@ -713,14 +713,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19712</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Masteriyo LMS &lt; 2.3.3 — Instructor+ Stored XSS via Quiz Description</div>
         <p class="cve-desc lang-en">The plugin does not sanitise and escape a quiz field before outputting it back in a page, and grants its instructor role the ability to store unfiltered HTML, allowing such users to perform Stored Cross-Site Scripting attacks against any visitor of the affected page, including administrators. This affects default single-site installations; sites running multisite, or defining DISALLOW_UNFILTERED_HTML, are not affected as the capability is not granted there.</p>
@@ -755,14 +755,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19714</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Simple JWT Login &lt; 3.6.8 — Unauthenticated Account Takeover via Missing Google id_token Audience Validation</div>
         <p class="cve-desc lang-en">The plugin does not validate the audience of the Google identity tokens it accepts, allowing unauthenticated users to authenticate as any user whose email address such a token carries, up to and including an administrator. Every site with the plugin's Google sign-in enabled is affected.</p>
@@ -797,14 +797,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19726</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Visualizer &lt; 4.0.7 — Contributor+ Cross-User Chart Configuration Disclosure</div>
         <p class="cve-desc lang-en">The plugin does not properly authorise access to the configuration of its charts, allowing users with the Contributor role and above to read the full configuration of any chart on the site, including charts the plugin's own interface denies them, and to retrieve every chart's configuration in a single request. The disclosed configuration can include the credentials of a remote data source a chart reads from.</p>
@@ -839,14 +839,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19728</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Extra Product Options Builder for WooCommerce &lt; 1.2.176 — Unauthenticated Customer File Disclosure via getpublicfileupload</div>
         <p class="cve-desc lang-en">The plugin does not verify that the requester is entitled to a customer-uploaded file before serving it, allowing unauthenticated users who obtain a file's stored name to retrieve it. The plugin writes a deny-all rule into its upload directories, so the disclosure only crosses a boundary on web servers that honour it, such as Apache — where it is ignored, as on a default nginx setup, the same files are already served at their direct URL and the endpoint exposes nothing further.</p>
@@ -881,14 +881,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-19715</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">WP OAuth Server &lt; 6.3.1 — Unauthenticated OAuth Token and User Data Disclosure via Debug Log File</div>
         <p class="cve-desc lang-en">The plugin does not restrict access to the debug log it writes, which is stored at a fixed and publicly reachable location, allowing unauthenticated users to read the OAuth tokens and authorisation codes it has issued as well as user records including password hashes when debug logging is enabled.</p>
@@ -923,14 +923,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-80311</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Stripe Payment Forms by WP Full Pay &lt; 8.5.5 — Cross-Customer Subscription Cancellation via IDOR</div>
         <p class="cve-desc lang-en">The plugin does not verify that a subscription belongs to the customer bound to the requesting customer-portal session before cancelling it, allowing a user with a confirmed portal session to cancel subscriptions belonging to other customers. Exploitation requires the attacker to know the target subscription's identifier, which is high-entropy and not enumerable through the plugin.</p>
@@ -965,14 +965,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-85037</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Sunshine Photo Cart &lt; 3.7 — Unauthenticated Price Manipulation via IDOR</div>
         <p class="cve-desc lang-en">The plugin does not validate that a client-supplied price identifier belongs to the item being purchased when it is added to the cart, allowing unauthenticated users to buy items at a lower price defined elsewhere on the site and complete an order at that price, resulting in financial loss for the site owner.</p>
@@ -1007,14 +1007,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-85038</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">B2BKing &lt; 5.2.40 — Unauthenticated B2B Group Assignment and Approval Bypass via Registration Role Selection</div>
         <p class="cve-desc lang-en">The plugin does not verify that a role selected during registration is one actually offered on the registration form, allowing unauthenticated users to assign themselves to restricted B2B customer groups and to skip the manual account-approval workflow during self-registration.</p>
@@ -1049,14 +1049,14 @@
     </div>
 
     <div class="cve-card collapsible">
-      <button class="cve-top" type="button" aria-expanded="false">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
           <span class="cve-id">CVE-2026-85418</span>
         </span>
         <span class="cve-top-right">
           <span class="cve-chevron" aria-hidden="true">▾</span>
         </span>
-      </button>
+      </div>
       <div class="cve-body">
         <div class="cve-title">Orbit Fox &lt; 3.0.9 — Contributor+ Stored XSS via Beaver Builder Pricing Table Widget</div>
         <p class="cve-desc lang-en">The plugin does not validate a user-supplied HTML tag name in one of its Beaver Builder widgets before echoing it into the rendered markup, allowing users with contributor-level access and above to inject arbitrary web scripts that execute when any visitor views the affected page.</p>
