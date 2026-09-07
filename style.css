@@ -336,9 +336,12 @@ section.block h2 {
 .cve-card.collapsible.open { padding: 24px 26px; }
 .cve-top {
   display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
-  width: 100%; background: none; border: none; margin: 0; padding: 0;
+  width: 100%; background: none; border: none;
+  margin: -18px -26px 0; padding: 18px 26px 0;
+  box-sizing: border-box; min-height: 24px;
   font: inherit; color: inherit; text-align: left; cursor: pointer;
 }
+.cve-card.open .cve-top { margin: -24px -26px 0; padding: 24px 26px 0; }
 .cve-top-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .cve-top-right { display: flex; align-items: center; gap: 14px; }
 .cve-chevron {
