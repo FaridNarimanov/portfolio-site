@@ -52,8 +52,8 @@
 
 <main class="content-wrap">
   <h1 class="page-title">CVE<span class="lang-en">s</span><span class="lang-az">-lər</span></h1>
-  <p class="page-lede lang-en">25 vulnerabilities discovered.</p>
-  <p class="page-lede lang-az">25 zəiflik tapılıb.</p>
+  <p class="page-lede lang-en">26 vulnerabilities discovered.</p>
+  <p class="page-lede lang-az">26 zəiflik tapılıb.</p>
 
   <section class="block">
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
@@ -1087,6 +1087,48 @@
         </div>
 
         <a class="cve-link" href="https://wpscan.com/vulnerability/8f9ba009-324f-46ef-853f-9f2e706c401e/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-87894</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">Rox Appointment Booking 1.0.9 - 1.2.2 — Unauthenticated Customer PII Disclosure via IDOR</div>
+        <p class="cve-desc lang-en">The plugin does not perform any authorization check on the endpoint that returns a booking's confirmation details, and each booking is addressed by a sequential numeric identifier, allowing unauthenticated attackers to read any customer's name, email, phone, booking details and payment status by enumerating that identifier.</p>
+        <p class="cve-desc lang-az">Plugin, rezervasiyanın təsdiq detallarını qaytaran endpoint-də heç bir icazə yoxlaması aparmır, üstəlik hər rezervasiya ardıcıl rəqəmsal identifikatorla ünvanlanır. Bu, autentifikasiyasız hücumçulara həmin identifikatoru sadalamaqla (enumerate) istənilən müştərinin adını, emailini, telefon nömrəsini, rezervasiya detallarını və ödəniş statusunu oxumağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-639 · Authorization Bypass Through User-Controlled Key</span><span class="lang-az">CWE-639 · İstifadəçi Nəzarətli Açarla Səlahiyyət Aşımı</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Rox Appointment Booking 1.0.9 – 1.2.2</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">1.2.3</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-10</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/3f098db1-5406-4a77-adb1-99a66eb806a4/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
   </section>
