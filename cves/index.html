@@ -52,8 +52,8 @@
 
 <main class="content-wrap">
   <h1 class="page-title">CVE<span class="lang-en">s</span><span class="lang-az">-lər</span></h1>
-  <p class="page-lede lang-en">26 vulnerabilities discovered.</p>
-  <p class="page-lede lang-az">26 zəiflik tapılıb.</p>
+  <p class="page-lede lang-en">28 vulnerabilities discovered.</p>
+  <p class="page-lede lang-az">28 zəiflik tapılıb.</p>
 
   <section class="block">
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
@@ -925,6 +925,48 @@
     <div class="cve-card collapsible">
       <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
         <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-74926</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">MultiVendorX 5.0.0 - 5.0.15 — Subscriber+ Arbitrary Store Data and Ownership Overwrite via stores REST Endpoint</div>
+        <p class="cve-desc lang-en">The plugin does not verify that a user owns the store they are acting on in one of its REST API routes, allowing any authenticated user, such as a subscriber, to overwrite any store's details and payout settings and to replace the record of who owns it.</p>
+        <p class="cve-desc lang-az">Plugin öz REST API route-larından birində istifadəçinin əməliyyat apardığı mağazaya sahib olduğunu doğrulamır. Bu, subscriber daxil olmaqla istənilən autentifikasiya olunmuş istifadəçiyə istənilən mağazanın detallarını, ödəniş ayarlarını üzərinə yazmağa və mağazanın sahibliyi qeydini əvəz etməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">7.1 · <span class="lang-en">High</span><span class="lang-az">Yüksək</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:71%; background:var(--sev-high);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">MultiVendorX 5.0.0 – 5.0.15</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">5.0.16</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-11</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/35ff7d7e-b3fe-4ae2-92cd-a122b8cdd97c/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
           <span class="cve-id">CVE-2026-80311</span>
         </span>
         <span class="cve-top-right">
@@ -1129,6 +1171,48 @@
         </div>
 
         <a class="cve-link" href="https://wpscan.com/vulnerability/3f098db1-5406-4a77-adb1-99a66eb806a4/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-87907</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">Rox Appointment Booking &lt; 1.2.8 — Unauthenticated Internal Notes Disclosure via Service and Category REST Routes</div>
+        <p class="cve-desc lang-en">The plugin does not perform any authorization check on the endpoints that return booking service and category records, allowing unauthenticated attackers to read the private internal notes stored on each service and category.</p>
+        <p class="cve-desc lang-az">Plugin, rezervasiya xidməti və kateqoriya qeydlərini qaytaran endpoint-lərdə heç bir icazə yoxlaması aparmır. Bu, autentifikasiyasız hücumçulara hər xidmət və kateqoriyada saxlanılan şəxsi daxili qeydləri oxumağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-200 · Exposure of Sensitive Information</span><span class="lang-az">CWE-200 · Həssas Məlumatın Açıqlanması</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Rox Appointment Booking &lt; 1.2.8</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">1.2.8</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-11</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/60f70070-f785-43a2-be51-c01e64fb1821/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
   </section>
