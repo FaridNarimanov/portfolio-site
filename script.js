@@ -70,8 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleCard = () => {
       const isOpen = card.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+      if (isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+      } else {
+        // Əgər 'none' vəziyyətindəyiksə, əvvəlcə konkret piksel dəyərinə qaytarırıq
+        // ki, bağlanma animasiyası düzgün başlasın.
+        body.style.maxHeight = body.scrollHeight + 'px';
+        body.offsetHeight; // reflow-u məcburi et
+        body.style.maxHeight = '0px';
+      }
     };
+
+    // Açılma animasiyası bitəndən sonra hündürlüyü "auto"ya keçir ki, sonradan
+    // şrift yüklənməsi/yenidən düzülmə kimi hallarda məzmun kəsilməsin.
+    body.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'max-height' && card.classList.contains('open')) {
+        body.style.maxHeight = 'none';
+      }
+    });
 
     toggle.addEventListener('click', toggleCard);
     toggle.addEventListener('keydown', (e) => {
@@ -90,11 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = card.querySelector('.project-body');
     if (!toggle || !body) return;
 
-    toggle.addEventListener('click', () => {
+    const toggleCard = () => {
       const isOpen = card.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+      if (isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        body.offsetHeight;
+        body.style.maxHeight = '0px';
+      }
+    };
+
+    body.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'max-height' && card.classList.contains('open')) {
+        body.style.maxHeight = 'none';
+      }
     });
+
+    toggle.addEventListener('click', toggleCard);
   });
 });
 
@@ -112,9 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEn.classList.toggle('active', lang === 'en');
       btnAz.classList.toggle('active', lang === 'az');
     }
-    // Açıq CVE və layihə kartlarının hündürlüyünü dil dəyişəndən sonra yenidən hesabla
+    // Açıq CVE və layihə kartları — dil dəyişəndə "auto" rejimində saxla ki, məzmun heç vaxt kəsilməsin
     document.querySelectorAll('.cve-card.collapsible.open .cve-body, .project-card.collapsible.open .project-body').forEach(body => {
-      body.style.maxHeight = body.scrollHeight + 'px';
+      body.style.maxHeight = 'none';
     });
   }
 
