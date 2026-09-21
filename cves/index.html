@@ -52,8 +52,8 @@
 
 <main class="content-wrap">
   <h1 class="page-title">CVE<span class="lang-en">s</span><span class="lang-az">-lər</span></h1>
-  <p class="page-lede lang-en">29 vulnerabilities discovered.</p>
-  <p class="page-lede lang-az">29 zəiflik tapılıb.</p>
+  <p class="page-lede lang-en">33 vulnerabilities discovered.</p>
+  <p class="page-lede lang-az">33 zəiflik tapılıb.</p>
 
   <section class="block">
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
@@ -1255,6 +1255,174 @@
         </div>
 
         <a class="cve-link" href="https://wpscan.com/vulnerability/be5cf196-2f4b-4ad6-b477-287f80f1dd0d/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-93507</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">WC Fields Factory &lt; 4.1.11 — Contributor+ Arbitrary Post Cloning and Private Content Disclosure</div>
+        <p class="cve-desc lang-en">The plugin does not properly restrict access to, or verify a nonce for, a post-cloning action, allowing Contributor-level users and above to duplicate arbitrary posts of any type or status, including other users' private or draft content, and gain read access to the resulting copy.</p>
+        <p class="cve-desc lang-az">Plugin bir yazı-klonlama əməliyyatına girişi düzgün məhdudlaşdırmır və ya onun üçün nonce doğrulamır. Bu, Contributor səviyyəsi və yuxarı hüquqlara malik istifadəçilərə istənilən tip və ya statusda olan yazıları — başqa istifadəçilərin şəxsi və ya qaralama məzmunu daxil olmaqla — kopyalamağa və nəticədə yaranan surətə oxuma girişi əldə etməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">3.3 · <span class="lang-en">Low</span><span class="lang-az">Aşağı</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:33%; background:var(--sev-low);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WC Fields Factory &lt; 4.1.11</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">4.1.11</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-15</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/21569537-3a83-4df1-a6c2-8ca720e71586/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-93508</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">WC Fields Factory &lt; 4.1.11 — Subscriber+ Arbitrary Post Meta Manipulation via AJAX</div>
+        <p class="cve-desc lang-en">The plugin does not properly restrict access to its field-management AJAX action, allowing authenticated users with Subscriber-level access and above to create, modify and delete arbitrary post meta on any post, including WooCommerce products, regardless of ownership, and to manipulate stored pricing rules on a product to reduce its checkout price.</p>
+        <p class="cve-desc lang-az">Plugin öz sahə-idarəetmə AJAX action-una girişi düzgün məhdudlaşdırmır. Bu, Subscriber səviyyəsi və yuxarı hüquqlara malik autentifikasiya olunmuş istifadəçilərə sahiblikdən asılı olmayaraq istənilən yazıda (WooCommerce məhsulları daxil olmaqla) ixtiyari post meta yaratmağa, dəyişməyə və silməyə, həmçinin məhsulda saxlanılan qiymət qaydalarını manipulyasiya edərək onun checkout qiymətini azaltmağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">8.1 · <span class="lang-en">High</span><span class="lang-az">Yüksək</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:81%; background:var(--sev-high);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">WC Fields Factory &lt; 4.1.11</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">4.1.11</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-15</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/a927f6d6-90d8-4b91-aed4-f5f53d2b5c64/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-93510</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">Points and Rewards for WooCommerce &lt; 2.10.4 — Subscriber+ Arbitrary Points and Wallet Balance Manipulation via assign_claim_points</div>
+        <p class="cve-desc lang-en">The plugin does not validate the claimed reward amount or restrict who can call its Win Wheel claim handler, allowing authenticated users, Subscriber and above, to credit their own account with an arbitrary and unlimited amount of loyalty points and, where a companion wallet plugin is active, wallet balance.</p>
+        <p class="cve-desc lang-az">Plugin iddia edilən mükafat məbləğini doğrulamır və ya öz Win Wheel claim handler-ini çağıra biləcək şəxsləri məhdudlaşdırmır. Bu, Subscriber və yuxarı səviyyəli autentifikasiya olunmuş istifadəçilərə öz hesablarına ixtiyari və limitsiz miqdarda loyallıq xalı, əlaqəli wallet plugini aktiv olduqda isə wallet balansı əlavə etməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">4.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:43%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-862 · Broken Access Control</span><span class="lang-az">CWE-862 · Pozulmuş Giriş Nəzarəti</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Points and Rewards for WooCommerce &lt; 2.10.4</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">2.10.4</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-15</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/b721d8bb-2426-4635-a419-07074168bd82/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-93511</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">Premium Packages &lt; 7.2.1 — Unauthenticated PayPal Webhook Signature Verification Bypass</div>
+        <p class="cve-desc lang-en">The plugin does not verify PayPal's webhook signature before processing payment and subscription notifications, allowing unauthenticated attackers to forge payment confirmations and subscription-cancellation events against any order whose transaction id they know.</p>
+        <p class="cve-desc lang-az">Plugin ödəniş və abunəlik bildirişlərini emal etməzdən əvvəl PayPal-ın webhook imzasını doğrulamır. Bu, autentifikasiyasız hücumçulara transaksiya ID-sini bildikləri istənilən sifariş üçün ödəniş təsdiqlərini və abunəlik-ləğvetmə hadisələrini saxtalaşdırmağa imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-290 · Authentication Bypass by Spoofing</span><span class="lang-az">CWE-290 · Saxtakarlıq Yolu ilə Autentifikasiya Bypass</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Premium Packages &lt; 7.2.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">7.2.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-09-15</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/edc2f15c-a72b-47c2-ad38-e6f5a8441d72/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
   </section>
