@@ -52,8 +52,8 @@
 
 <main class="content-wrap">
   <h1 class="page-title">CVE<span class="lang-en">s</span><span class="lang-az">-lər</span></h1>
-  <p class="page-lede lang-en">33 vulnerabilities discovered.</p>
-  <p class="page-lede lang-az">33 zəiflik tapılıb.</p>
+  <p class="page-lede lang-en">35 vulnerabilities discovered.</p>
+  <p class="page-lede lang-az">35 zəiflik tapılıb.</p>
 
   <section class="block">
     <h2><span class="lang-en">Published</span><span class="lang-az">Açıqlanmış Zəifliklər</span></h2>
@@ -1441,6 +1441,90 @@
         </div>
 
         <a class="cve-link" href="https://wpscan.com/vulnerability/edc2f15c-a72b-47c2-ad38-e6f5a8441d72/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-106166</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">NEX-Forms 9.2.1 - 9.2.5 — Unauthenticated Arbitrary Form Entry Modification via 'nf_set_entry_update_id' Parameter</div>
+        <p class="cve-desc lang-en">The plugin does not perform any authorization, ownership or request-validation checks before updating stored form entries, allowing unauthenticated attackers to overwrite, permanently erase, reassign or append to any previously submitted form entry by referencing its sequential identifier.</p>
+        <p class="cve-desc lang-az">Plugin saxlanmış forma qeydlərini yeniləməzdən əvvəl heç bir avtorizasiya, sahiblik və ya sorğu doğrulaması aparmır. Bu, autentifikasiyasız hücumçulara ardıcıl identifikatoru göstərməklə əvvəl göndərilmiş istənilən forma qeydini üzərinə yazmağa, həmişəlik silməyə, başqasına təyin etməyə və ya ona əlavə etməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">5.3 · <span class="lang-en">Medium</span><span class="lang-az">Orta</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:53%; background:var(--sev-medium);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-639 · Authorization Bypass Through User-Controlled Key</span><span class="lang-az">CWE-639 · İstifadəçi Tərəfindən İdarə Olunan Açar vasitəsilə Avtorizasiya Bypass</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">NEX-Forms 9.2.1 - 9.2.5</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">9.3.1</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-10-12</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/aa33ce05-091d-4fef-b875-4fedb8b8fc9d/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
+      </div>
+    </div>
+
+    <div class="cve-card collapsible">
+      <div class="cve-top" role="button" tabindex="0" aria-expanded="false">
+        <span class="cve-top-left">
+          <span class="cve-id">CVE-2026-110191</span>
+        </span>
+        <span class="cve-top-right">
+          <span class="cve-chevron" aria-hidden="true">▾</span>
+        </span>
+      </div>
+      <div class="cve-body">
+        <div class="cve-title">Product Delivery Date for WooCommerce – Lite &lt; 3.3.2 — Contributor+ Order Information Disclosure via Calendar View AJAX Actions</div>
+        <p class="cve-desc lang-en">The plugin does not perform a capability check before disclosing order details through its calendar view AJAX actions, allowing users with a role as low as Contributor to view other customers' order information.</p>
+        <p class="cve-desc lang-az">Plugin təqvim görünüşü AJAX əməliyyatları vasitəsilə sifariş təfərrüatlarını açıqlamazdan əvvəl səlahiyyət yoxlaması aparmır. Bu, Contributor kimi aşağı rola malik istifadəçilərə digər müştərilərin sifariş məlumatlarını görməyə imkan verir.</p>
+
+        <div class="cve-meta">
+          <div>
+            <span class="k">CVSS 3.1</span>
+            <span class="v">2.7 · <span class="lang-en">Low</span><span class="lang-az">Aşağı</span></span>
+            <div class="cvss-bar"><div class="cvss-fill" style="width:27%; background:var(--sev-low);"></div></div>
+          </div>
+          <div>
+            <span class="k">CWE</span>
+            <span class="v"><span class="lang-en">CWE-200 · Exposure of Sensitive Information</span><span class="lang-az">CWE-200 · Həssas Məlumatın Açıqlanması</span></span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Affected</span><span class="lang-az">Təsirlənən</span></span>
+            <span class="v">Product Delivery Date for WooCommerce – Lite &lt; 3.3.2</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Fixed in</span><span class="lang-az">Düzəldildi</span></span>
+            <span class="v">3.3.2</span>
+          </div>
+          <div>
+            <span class="k"><span class="lang-en">Published</span><span class="lang-az">Tarix</span></span>
+            <span class="v">2026-10-14</span>
+          </div>
+        </div>
+
+        <a class="cve-link" href="https://wpscan.com/vulnerability/d7310c1a-f858-4dc5-8102-813fb64096a6/" target="_blank" rel="noopener"><span class="lang-en">View Report on WPScan →</span><span class="lang-az">WPScan üzərindən hesabatı oxu →</span></a>
       </div>
     </div>
   </section>
