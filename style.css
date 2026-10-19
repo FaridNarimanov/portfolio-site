@@ -481,3 +481,4 @@ footer.main-footer {
 .cve-card.reserved { padding: 18px 26px; }
 .cve-card.reserved .cve-top { margin: 0; padding: 0; cursor: default; }
 .cve-reserved-note { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.cve-platform img { width: 24px; height: 24px; display: block; }
