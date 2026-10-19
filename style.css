@@ -473,3 +473,11 @@ footer.main-footer {
   h1.hero-title { font-size: 34px; }
   .cert-row { flex-direction: column; align-items: flex-start; }
 }
+/* ============ PLATFORM ICONS ============ */
+.cve-platform { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 24px; height: 24px; }
+.cve-platform svg { width: 22px; height: 22px; display: block; }
+.cve-platform.wp { color: #5b9bd5; }
+.cve-platform.rh { color: #ee0000; }
+.cve-card.reserved { padding: 18px 26px; }
+.cve-card.reserved .cve-top { margin: 0; padding: 0; cursor: default; }
+.cve-reserved-note { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
